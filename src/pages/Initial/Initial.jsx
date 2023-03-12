@@ -1,4 +1,6 @@
 import React from 'react';
+import { Budget_form, Footer, Nav_bar } from '../../components';
+import { Header } from '../../containers';
 import styles from './styles/Initial.module.sass';
 
 const Initial = () => {
