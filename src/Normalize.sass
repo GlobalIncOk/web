@@ -1,0 +1,87 @@
+// Main Variables
+
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600;700&family=Krona+One&display=swap')
+
+$primary-color: #F5F5F5
+$primary2-color: #ABC3FF
+$secondary-color: #2B437F
+$secondary2-color: #252525
+$terciary-color: #5786FF
+
+$primary-background: #c6538c
+$secondary-background: #00DA55
+
+$font-color: #000000
+$secondary-font-color: #FFFFFF
+
+$primary-distance: 5rem
+
+$font-family: 'Krona One', sans-serif
+$secondary-font-family: 'Bai Jamjuree', sans-serif
+
+$header-font-color: $font-color
+$header-background: $primary-background
+
+$footer-font-color: $font-color
+$footer-background: $primary-background
+
+$global-border-style: $primary-color
+$secondary-global-border-style: $secondary-color
+
+$header-max-width: 100%
+$header-mobile-height: 50px
+$header-tablet-height: 75px
+$header-desktop-height: 6rem
+
+$break-small: 36rem
+$break--medium: 62rem
+$break-large: 90rem
+
+$max-width-small: 36rem
+$max-width-medium: 62rem
+$max-width-large: 90rem
+
+//Mobile
+$h1m: 2.125rem
+$h2m: 1.5rem
+$h3m: 1.25rem
+$h4m: 1rem
+$h5m: 0.875rem
+$h6m: 0.75rem
+
+//Desktop
+$h1d: 3rem
+$h2d: 2.125rem
+$h3d: 1.5rem
+$h4d: 1.25rem
+$h5d: 1rem
+$h6d: 0.875rem
+
+
+body
+	font-family: $secondary-font-family
+
+
+// Utilities
+.text-center
+	text-align: center
+
+
+// Global
+a
+	text-decoration: none
+	color: $header-font-color
+
+h1, h2, h3, h4, h5, h6
+	font-weight: 900
+	font-family: $font-family
+	margin: $primary-distance
+
+img
+	max-width: 100%
+	display: block
+	height: auto
+
+nav
+	font-size: 1rem
+	color: $header-font-color
