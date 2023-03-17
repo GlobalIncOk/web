@@ -1,8 +1,17 @@
 import React from 'react';
-import styles from './styles/Header.module.sass';
+import '../../styles/Header.sass';
+import { Navbar } from '../../components/Navbar';
+import Brandlogo from '../../assets/Icons/Brandlogo/Brandlogo';
+import { GoToBudget } from '../../components/Buttons/GoToBudget';
 
-const Header = () => {
-	return <div className={styles.header}>Header</div >;
+const Header = ({categories}) => {
+	return (
+		<div className={'header'}>
+			<Brandlogo />
+			<Navbar categories={categories} />
+			<GoToBudget />
+		</div>
+	)
 };
 
 export default Header;

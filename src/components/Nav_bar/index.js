@@ -1,1 +1,0 @@
-export { default as Nav_bar } from './Nav_bar';
