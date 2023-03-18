@@ -1,15 +1,14 @@
 import React from 'react';
 import { BrowserRouter, Routes } from 'react-router-dom';
-import Layout from '../../containers/Layout/Layout';
-import Header from '../../containers/Header/Header';
+import { Layout, Header } from '../../containers/index';
 
 const Initial = () => {
 
   const Categories = [
-    { name: 'Inicio', id: 0, route: '/catalog' },
-    { name: 'Servicios', id: 1, route: '/category/smartphones' },
-    { name: 'Nuestros clientes', id: 2, route: '/category/headphones' },
-    { name: 'Nosotros', id: 3, route: '/category/smartwatchs' }];
+    { name: 'Inicio', id: 0, route: '/inicio' },
+    { name: 'Servicios', id: 1, route: '/servicios' },
+    { name: 'Nuestros clientes', id: 2, route: '/nuestros-clientes' },
+    { name: 'Nosotros', id: 3, route: '/nosotros' }];
 
   return (
     <BrowserRouter>

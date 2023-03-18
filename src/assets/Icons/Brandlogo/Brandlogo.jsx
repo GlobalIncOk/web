@@ -4,8 +4,7 @@ import '../../../styles/Icons.sass'
 const Brandlogo = () => {
   return (
     <>
-      {/* <img className={'brandlogo'} src={require('../../Images/Logo GLOBALINC Negro.png')} alt="brandlogo" />
-      <img className={'brandlogo2'} src={require('../../Images/LogoGLOBALINC tipo NEGRO.png')} alt="brandlogo2" /> */}
+      <img className={'brandlogo'} src={require('../../Images/LogoHeader.png')} alt="brandlogo" />
     </>
   )
 }
