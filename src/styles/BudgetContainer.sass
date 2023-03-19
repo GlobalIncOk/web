@@ -1,0 +1,69 @@
+@import '../Variables'
+
+.budgetContainer
+    max-width: 100%
+    min-height: 25vh
+    height: 100%
+    padding: 1.5rem
+    position: relative
+    display: flex
+    flex-direction: row-reverse
+    justify-content: flex-end
+    align-items: center
+
+    .fondoCeleste
+        background-color: $primary2-color
+        width: 60%
+        height: 90%
+        position: absolute
+        right: 0
+        z-index: -10
+
+    .fondoInfo
+        width: 80%
+        height: 100%
+        display: flex
+        flex-direction: column
+        position: inherit
+        text-align: justify
+        h1
+            font-size:1.20rem
+            margin-bottom: 0
+        p
+            font-size:.80rem
+            margin-top: .25rem
+
+@media (min-width: $break-small)
+    .budgetContainer
+        min-height: 35vh
+        .fondoInfo
+            max-width: 60%
+            height: 100%
+            padding: 0 0 0 2rem
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            position: inherit
+            text-align: justify
+            h1
+                font-size: 1.60rem
+            p
+                font-size: .8rem
+                margin-top: .4rem
+
+@media (min-width: $break-medium)
+    .budgetContainer
+        min-height: 50vh
+        .fondoInfo
+            width: 60%
+            height: 100%
+            padding: 0 0 0 3rem
+            display: flex
+            flex-direction: column
+            position: inherit
+            text-align: justify
+            h1
+                font-size: 3rem
+            p
+                font-size: 1.5rem
+                margin-top: 1.5rem
