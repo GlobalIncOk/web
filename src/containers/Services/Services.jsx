@@ -4,7 +4,7 @@ import '../../styles/Services.sass';
 const Services = () => {
   return (
     <div>
-      {/* <ServicesTitle /> */}
+      <ServicesTitle />
       <Card />
     </div>
   );
