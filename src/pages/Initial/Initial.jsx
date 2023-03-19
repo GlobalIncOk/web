@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes } from 'react-router-dom';
-import { Layout, Header, Services } from '../../containers/index';
+import { Layout, Header, BudgetContainer, Services } from '../../containers/index';
 
 const Initial = () => {
 
@@ -16,6 +16,7 @@ const Initial = () => {
     <BrowserRouter>
         <Layout>
           <Header categories={Categories} />
+          <BudgetContainer/>
           <Services />
           <Routes>
             {/* <Route exact path='/' element={<Landing />} />
