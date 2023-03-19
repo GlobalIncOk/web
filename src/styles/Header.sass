@@ -1,0 +1,17 @@
+@import '../Variables'
+
+.header
+  max-width: $header-max-width
+  display: flex
+  align-items: center
+  justify-content: space-between
+  background-color: $header-background
+  height: $header-mobile-height
+
+@media (min-width: $break-small)
+  .header
+    height: $header-tablet-height
+
+@media (min-width: $break-medium)
+  .header
+    height: $header-desktop-height

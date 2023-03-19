@@ -1,0 +1,23 @@
+@import '../Variables'
+
+.btncontainer
+	display: none
+
+@media (min-width: $break-medium)
+	.btncontainer
+		display: flex
+		justify-content: center
+		padding-right:  6.66667vw
+		padding-left: 1vw
+
+	.contact
+		width: 9.0625rem
+		height: 3.25rem
+		background: transparent
+		border-radius: .5rem
+		border: .25rem solid $header-font-color
+		cursor: pointer
+		color: $header-font-color
+		font-size: 1rem
+		font-weight: 600
+		line-height: 1.25rem

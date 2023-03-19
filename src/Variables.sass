@@ -1,50 +1,46 @@
 // Main Variables
 
-$primary-color: #c6538c
-$secondary-color: #00DA55
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600;700&family=Krona+One&display=swap')
 
-$primary-background: #c6538c
-$secondary-background: #00DA55
+$primary-color: #F5F5F5
+$primary2-color: #ABC3FF
+$secondary-color: #2B437F
+$secondary2-color: #252525
+$terciary-color: #5786FF
 
-$font-color: #3B3B3B
-$secondary-font-color: #FFFFFF
+$primary-background: #F5F5F5
+$secondary-background: #252525
+
+$font-color: #252525
+$secondary-font-color: #F5F5F5
 
 $primary-distance: 5rem
 
-$font-family: 'Roboto', sans-serif
-$secondary-font-family: 'Lato', sans-serif
+$font-family: 'Krona One', sans-serif
+$secondary-font-family: 'Bai Jamjuree', sans-serif
 
-$header-font-color: $font-color
-$header-background: $primary-background
+$header-font-color: $secondary-font-color
+$header-secondary-font-color: $secondary-font-color
+$header-background: $secondary-background
 
-$footer-font-color: $font-color
-$footer-background: $primary-background
+$footer-font-color: $secondary-font-color
+$footer-background: $secondary-background
 
-$global-border-style: $primary-color
-$secondary-global-border-style: $secondary-color
+$header-max-width: 100%
+$header-mobile-height: 3.125rem
+$header-tablet-height: 5rem
+$header-desktop-height: 6.625rem
 
-$header-max-width: 1440px
-$header-mobile-height: 50px
-$header-tablet-height: 75px
-$header-desktop-height: 75px
+$break-small: 30rem
+$break-medium: 64rem
+$break-large: 90rem
 
-$break-small: 478px,
-$break--medium: 991px,
-$break-large: 1440px,
+$max-width-small: 36rem
+$max-width-medium: 62rem
+$max-width-large: 90rem
 
-$max-width-small: 478px,
-$max-width-medium: 991px,
-$max-width-large: 1440px,
-
-html
-	box-sizing: border-box
-	font-size: 62.5%
-*, *::before, *::after
-	box-sizing: inherit
 body
-	font-family: $font-family
-	font-size: 1.6rem
-	line-height: 1.5
+	font-family: $secondary-font-family
 
 
 // Utilities
@@ -53,22 +49,17 @@ body
 
 
 // Global
-.container
-	max-width: 120rem
-	width: 90%
-	margin: 0 auto
+a
+	text-decoration: none
+	color: $header-font-color
 
-h1, h2, h3
+h1, h2, h3, h4, h5, h6
 	font-weight: 900
-	font-family: $secondary-font-family
+	font-family: $font-family
 	margin: $primary-distance
-h1
-	font-size: 4.4rem
-h2
-	font-size: 3.6rem
-h3
-	font-size: 2.8rem
+
 img
 	max-width: 100%
 	display: block
 	height: auto
+	position: relative
