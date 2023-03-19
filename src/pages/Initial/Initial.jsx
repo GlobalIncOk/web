@@ -8,7 +8,9 @@ const Initial = () => {
     { name: 'Inicio', id: 0, route: '/inicio' },
     { name: 'Servicios', id: 1, route: '/servicios' },
     { name: 'Nuestros clientes', id: 2, route: '/nuestros-clientes' },
-    { name: 'Nosotros', id: 3, route: '/nosotros' }];
+    { name: 'Nosotros', id: 3, route: '/nosotros' },
+    { name: 'Contactanos', id: 3, route: '/contactanos' }
+  ];
 
   return (
     <BrowserRouter>
