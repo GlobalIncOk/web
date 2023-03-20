@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../../styles/Icons.sass'
 
-const Brandlogo = () => {
+const BrandLogo = () => {
   return (
     <>
       <img className={'brandlogo'} src={require('../../Images/LogoHeader.png')} alt="brandlogo" />
@@ -9,4 +9,4 @@ const Brandlogo = () => {
   )
 }
 
-export default Brandlogo;
+export default BrandLogo;
