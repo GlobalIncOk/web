@@ -5,3 +5,4 @@ export { default as ServicesTitle } from './Titles/Services/ServicesTitle';
 export { default as UsTitle } from './Titles/Us/UsTitle';
 export { default as Budget } from './Buttons/Budget/Budget';
 export { default as People } from './People/People';
+export { default as ClientsTitle} from "./ClientsTitle/ClientsTitle"
