@@ -7,18 +7,11 @@
     padding: 1.5rem
     position: relative
     display: flex
-    flex-direction: row-reverse
-    justify-content: flex-end
-    align-items: center
-
-    .fondoCeleste
-        background-color: $primary2-color
-        width: 60%
-        height: 90%
-        position: absolute
-        right: 0
-        z-index: -10
-
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+    background: linear-gradient(to Right, $primary-color 55%, $terciary-color 45%)
+    padding: 0 0 0 2rem
     .fondoInfo
         width: 80%
         height: 100%
@@ -36,10 +29,10 @@
 @media (min-width: $break-small)
     .budgetContainer
         min-height: 35vh
+        padding: 0 0 0 4rem
         .fondoInfo
             max-width: 60%
             height: 100%
-            padding: 0 0 0 2rem
             display: flex
             flex-direction: column
             align-items: flex-start
@@ -54,10 +47,10 @@
 @media (min-width: $break-medium)
     .budgetContainer
         min-height: 50vh
+        padding: 0 0 0 6rem
         .fondoInfo
             width: 60%
             height: 100%
-            padding: 0 0 0 3rem
             display: flex
             flex-direction: column
             position: inherit
