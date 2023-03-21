@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes } from 'react-router-dom';
-import { Layout, Header, BudgetContainer, Services, Us } from '../../containers/index';
+import { Layout, Header, BudgetContainer, Services, Clients, Us } from '../../containers/index';
 
 const Initial = () => {
 
@@ -18,6 +18,7 @@ const Initial = () => {
           <Header categories={Categories} />
           <BudgetContainer/>
           <Services />
+          <Clients/>
           <Us />
           <Routes>
             {/* <Route exact path='/' element={<Landing />} />
