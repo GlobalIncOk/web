@@ -1,11 +1,12 @@
 import '../../styles/Header.sass';
 import { NavBar, Contact } from '../../components/index';
-import { Brandlogo } from '../../assets/index';
+import BrandLogo from '../../assets/Icons/BrandLogo/BrandLogo';
+
 
 const Header = ({categories}) => {
   return (
     <div className={"header"}>
-      <Brandlogo />
+      <BrandLogo />
 			<NavBar categories={categories}/>
 			<Contact />
 		</div>
