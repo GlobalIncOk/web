@@ -1,16 +1,16 @@
-import '../../styles/Header.sass';
-import { NavBar, Contact } from '../../components/index';
-import BrandLogo from '../../assets/Icons/BrandLogo/BrandLogo';
+import '../../styles/Header.sass'
 
+import { NavBar, Contact } from '../../components/index'
+import BrandLogo from '../../assets/Icons/BrandLogo/BrandLogo'
 
 const Header = ({categories}) => {
   return (
-    <div className={"header"}>
+    <div className='header-container'>
       <BrandLogo />
-			<NavBar categories={categories}/>
-			<Contact />
-		</div>
-  );
-};
+      <NavBar categories={categories} />
+      <Contact />
+    </div>
+  )
+}
 
-export default Header;
+export default Header

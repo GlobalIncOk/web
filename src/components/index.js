@@ -5,5 +5,5 @@ export { default as ServicesTitle } from './Titles/Services/ServicesTitle';
 export { default as UsTitle } from './Titles/Us/UsTitle';
 export { default as Budget } from './Buttons/Budget/Budget';
 export { default as People } from './People/People';
-export { default as Budget1 } from './Budget/Budget1';
-export { default as Budget2 } from './Budget/Budget2';
+export { default as BudgetTop } from './Budget/BudgetTop';
+export { default as BudgetBottom } from './Budget/BudgetBottom';

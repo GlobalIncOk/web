@@ -1,19 +1,16 @@
 @import '../Variables'
 
 .brandlogo
-    width: 10rem
-    height: 3rem
-    padding-left: 1rem
+  background-image: url('../assets/Images/GlobalIncLogoMobile.png')
+  background-repeat: no-repeat, repeat
+  height: 3rem
 
 @media (min-width: $break-small)
   .brandlogo
-    width: 17rem
-    height: 4rem
-    padding-left: 3rem
+    background-image: url('../assets/Images/GlobalIncLogoTablet.png')
+    height: 4.25rem
 
-@media (min-width: $break-medium)
+@media (min-width: $break-small)
   .brandlogo
-    width: 17rem
-    height: 4rem
-    padding-left: 6.66667vw
-    padding-right: 1vw
+    background-image: url('../assets/Images/GlobalIncLogoDesktop.png')
+    height: 4.5rem

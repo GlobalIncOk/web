@@ -1,0 +1,23 @@
+@import '../Variables'
+
+.us-container
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  grid-gap: 16px
+  margin: 2rem
+  :nth-child(1)
+    grid-column: 1 / 5
+    grid-row: 1 /1
+  :nth-child(2)
+    grid-column: 1 / 5
+    grid-row: 2
+    align-self: center
+    justify-self: center
+
+// @media (min-width: $break-small)
+//   .header-container
+//     height: $header-tablet-height
+
+// @media (min-width: $break-medium)
+//   .header-container
+//     height: $header-desktop-height

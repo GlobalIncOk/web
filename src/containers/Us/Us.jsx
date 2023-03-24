@@ -3,7 +3,7 @@ import '../../styles/Us.sass';
 
 const Us = () => {
   return (
-    <div>
+    <div className='us-container'>
       <UsTitle />
       <People />
     </div>

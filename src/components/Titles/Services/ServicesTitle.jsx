@@ -6,9 +6,9 @@ const ServicesTitle = () => {
     <div className={'services-header'}>
       <h2>Servicios</h2>
       <div className={'services-paragraph'}>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Quo sequi, aliquid velit minus dolorum quaerat magnam quos
-          quam suscipit corporis quas porro ea culpa nobis?</p>
+        <p>Nunc et rhoncus vitae malesuada praesent urna nulla ultricies.
+          Est et facilisi bibendum feugiat adipiscing duis tincidunt semper.
+          Risus euismod mi cursus euismod justo ac.</p>
       </div>
     </div>
     </>

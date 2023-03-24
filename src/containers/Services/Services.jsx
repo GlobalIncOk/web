@@ -3,7 +3,7 @@ import '../../styles/Services.sass';
 
 const Services = () => {
   return (
-    <div>
+    <div className='services-container'>
       <ServicesTitle />
       <Card />
     </div>
