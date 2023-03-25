@@ -7,3 +7,18 @@ export { default as BudgetButton } from './Budget/BudgetButton';
 export { default as BudgetTitle } from './Budget/BudgetTitle'
 export { default as People } from './People/People';
 export { default as ClientsTitle} from "./ClientsTitle/ClientsTitle"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export { default as GalleryClients } from "./GalleryClients/GalleryClients"

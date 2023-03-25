@@ -1,11 +1,13 @@
 import React from "react"
 import "../../styles/Clients.sass"
 import ClientsTitle  from "../../components/ClientsTitle/ClientsTitle"
+import GalleryClients  from "../../components/GalleryClients/GalleryClients"
+
 const Clients = () => {
     return(
         <div className="clientsContainer">
             <ClientsTitle/>
-            <p>Client Photos</p>
+            <GalleryClients/>
         </div>
     )
 }
