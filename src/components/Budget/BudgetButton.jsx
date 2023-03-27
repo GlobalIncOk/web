@@ -1,9 +1,11 @@
-import "../../styles/BudgetButton.sass"
-const BudgetButton = () => {
-    return(
-        <div className="budgetButton">
-            <button>Pedir presupuesto</button>
-        </div>
-    )
+import '../../../styles/Budget.sass'
+
+const Budget = () => {
+	return(
+		<div className='budget-container'>
+			<button className='budget'>Pedir cotización</button>
+		</div>
+	)
 }
-export default BudgetButton
+
+export default Budget

@@ -1,1 +1,1 @@
-export { default as BrandLogo } from './Icons/BrandLogo';
+export { default as BrandLogo } from './Icons/BrandLogo'
