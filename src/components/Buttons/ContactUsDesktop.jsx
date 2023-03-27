@@ -1,6 +1,6 @@
-import '../../../styles/ContactUsDesktop.sass'
+import '../../styles/ContactUsDesktop.sass'
 
-const Contact = () => {
+const ContactUsDesktop = () => {
 	return (
 		<div className='contactusdesktop-container'>
 			<button className='contactusdesktop'>Contactanos</button>
@@ -8,4 +8,4 @@ const Contact = () => {
 	)
 }
 
-export default Contact
+export default ContactUsDesktop

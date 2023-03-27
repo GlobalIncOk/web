@@ -1,4 +1,4 @@
-import '../../../styles/ContactUsMobile.sass'
+import '../../styles/ContactUsMobile.sass'
 
 const ContactUsMobile = () => {
 	return (
