@@ -1,6 +1,6 @@
 import '../../styles/Header.sass'
 
-import { NavBar, Contact } from '../../components/index'
+import { NavBar, ContactUsDesktop } from '../../components/index'
 import BrandLogo from '../../assets/Icons/BrandLogo/BrandLogo'
 
 const Header = ({categories}) => {
@@ -8,7 +8,7 @@ const Header = ({categories}) => {
     <div className='header-container'>
       <BrandLogo />
       <NavBar categories={categories} />
-      <Contact />
+      <ContactUsDesktop />
     </div>
   )
 }

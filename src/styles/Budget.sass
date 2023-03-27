@@ -1,32 +1,24 @@
 @import '../Variables'
 
-.budgetButton
-    max-width: auto
-    // height: 100%
-    display:flex
-    align-items: flex-end
-    margin-top: .255rem
-    button
-        color: $secondary-font-color
-        font-size: .75rem
-        border: none
-        border-radius:10px
-        padding:0.5rem
-        background: linear-gradient(to bottom, $terciary-color,$secondary-color)
-
-@media (min-width: $break-small)
-
-    .budgetButton
-        margin-top: 1rem
-        button
-            font-size: .9rem
-            padding:0.70rem
+.budget-container
+	display: none
 
 @media (min-width: $break-medium)
+	.budget-container
+		display: none
 
-    .budgetButton
-        // margin-top: 2rem
-        button
-            font-size: 1.2rem
-            padding:0.9rem
-            // margin: .5rem 0
+@media (min-width: $break-large)
+	.budget-container
+		display: inherit
+		width: 400px
+	.budget
+		width: 100%
+		background: linear-gradient(180deg, rgba(87,134,255,1) 80%, rgba(255,255,255,1) 100%)
+		padding: 1.5rem 1rem
+		border-radius: .5rem
+		border: none
+		cursor: pointer
+		color: $secondary-font-color
+		font-size: 1rem
+		font-weight: 600
+		line-height: 1.25rem

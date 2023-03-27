@@ -1,13 +1,13 @@
-import { Card, ServicesTitle } from '../../components';
-import '../../styles/Services.sass';
+import { ServiceCard, ServicesTitle } from '../../components'
+import '../../styles/Services.sass'
 
 const Services = () => {
   return (
     <div className='services-container'>
       <ServicesTitle />
-      <Card />
+      <ServiceCard />
     </div>
-  );
-};
+  )
+}
 
-export default Services;
+export default Services
