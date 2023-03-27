@@ -1,17 +1,44 @@
 @import '../Variables'
 
-.header
-  max-width: $header-max-width
-  display: flex
-  align-items: center
-  justify-content: space-between
-  background-color: $header-background
-  height: $header-mobile-height
-
-@media (min-width: $break-small)
-  .header
-    height: $header-tablet-height
+.header-container
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  grid-gap: 1rem
+  max-height: 3.875rem
+  margin: 0 2rem
+  :nth-child(1)
+    grid-column: 1 / 5
+    grid-row: 1
+  :nth-child(2)
+    grid-column: 4 / 5
+    grid-row: 1
+    align-self: center
+    justify-self: flex-end
 
 @media (min-width: $break-medium)
-  .header
-    height: $header-desktop-height
+  .header-container
+    grid-template-columns: repeat(8, 1fr)
+    grid-gap: 1.5rem
+    max-height: 6rem
+    margin: 0 4.5rem
+    :nth-child(1)
+      grid-column: 1 / 4
+    :nth-child(2)
+      grid-column: 8 / 9
+
+@media (min-width: $break-large)
+  .header-container
+    grid-template-columns: repeat(12, 1fr)
+    grid-gap: 1.5rem
+    max-height: 6.5rem
+    margin: 0 6rem
+    :nth-child(1)
+      grid-column: 1 / 4
+    :nth-child(2)
+      grid-column: 4 / 11
+      justify-self: center
+    :nth-child(3)
+      grid-column: 11 / 13
+      grid-row: 1
+      align-items: center
+      justify-content: center

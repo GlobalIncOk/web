@@ -1,13 +1,13 @@
-import { People, UsTitle } from '../../components';
-import '../../styles/Us.sass';
+import { UsCard, UsTitle } from '../../components'
+import '../../styles/Us.sass'
 
 const Us = () => {
   return (
-    <div>
+    <div className='us-container'>
       <UsTitle />
-      <People />
+      <UsCard />
     </div>
-  );
-};
+  )
+}
 
-export default Us;
+export default Us

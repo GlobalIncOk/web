@@ -1,5 +1,5 @@
-import React from 'react';
-import Proptypes from 'prop-types';
+import React from 'react'
+import Proptypes from 'prop-types'
 
 const Layout = ({children}) => {
   return (
@@ -13,4 +13,4 @@ Layout.proptype = {
   children: Proptypes.element.isRequired
 }
 
-export default Layout;
+export default Layout

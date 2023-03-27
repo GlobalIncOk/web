@@ -19,28 +19,26 @@ $primary-distance: 5rem
 $font-family: 'Krona One', sans-serif
 $secondary-font-family: 'Bai Jamjuree', sans-serif
 
-$header-font-color: $secondary-font-color
+$header-font-color: $font-color
 $header-secondary-font-color: $secondary-font-color
-$header-background: $secondary-background
+$header-background: $primary-background
+$header-secondary-background: $secondary-background
 
 $footer-font-color: $secondary-font-color
 $footer-background: $secondary-background
 
 $header-max-width: 100%
-$header-mobile-height: 3.125rem
+$header-mobile-height: 4rem
 $header-tablet-height: 5rem
 $header-desktop-height: 6.625rem
 
 $break-small: 30rem
-$break-medium: 64rem
+$break-medium: 62rem
 $break-large: 90rem
 
 $max-width-small: 36rem
 $max-width-medium: 62rem
 $max-width-large: 90rem
-
-body
-	font-family: $secondary-font-family
 
 
 // Utilities
@@ -54,12 +52,10 @@ a
 	color: $header-font-color
 
 h1, h2, h3, h4, h5, h6
-	font-weight: 900
 	font-family: $font-family
-	margin: $primary-distance
 
-img
-	max-width: 100%
-	display: block
-	height: auto
-	position: relative
+body
+	font-family: $secondary-font-family
+
+svg
+	margin: 0
