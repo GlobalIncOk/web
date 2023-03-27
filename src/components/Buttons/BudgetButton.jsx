@@ -1,6 +1,6 @@
-import '../../../styles/Budget.sass'
+import '../../styles/BudgetButton.sass'
 
-const Budget = () => {
+const BudgetButton = () => {
 	return(
 		<div className='budget-container'>
 			<button className='budget'>Pedir cotización</button>
@@ -8,4 +8,4 @@ const Budget = () => {
 	)
 }
 
-export default Budget
+export default BudgetButton

@@ -1,8 +1,8 @@
 import React from 'react'
 import '../../styles/HeroBottom.sass'
-import Budget from '../Buttons/Budget/Budget'
-import ContactUs from '../Buttons/ContactUsMobile/ContactUsMobile'
-import ContactUsTablet from '../Buttons/ContactUsTablet/ContactUsTablet'
+import ContactUsDesktop from '../Buttons/ContactUsDesktop'
+import ContactUsMobile from '../Buttons/ContactUsMobile'
+import ContactUsTablet from '../Buttons/ContactUsTablet'
 
 const HeroBottom = () => {
 	return (
@@ -11,9 +11,9 @@ const HeroBottom = () => {
       <div className='hero-bottom-text'>
         <h2>Lorem ipsum dolor sit amet consectetur. Arcu proin viverra</h2>
         <p>Nunc et rhoncus vitae malesuada praesent urna nulla ultricies. Est et facilisi bibendum feugiat adipiscing duis tindcidunt semper. Risus euismod mi cursus euismod justo ac.</p>
-        <ContactUs />
+        <ContactUsMobile />
         <ContactUsTablet />
-        <Budget />
+        <ContactUsDesktop />
       </div>
     </div>
 	)
