@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Routes } from 'react-router-dom'
 import { HeroTop, HeroBottom } from '../../components/index'
-import { Layout, Header, Services, Us } from '../../containers/index'
+import { Layout, Header, Services, Clients, Us } from '../../containers/index'
 import Partners from '../../containers/Partners/Partners'
 
 const Initial = () => {
@@ -20,6 +20,7 @@ const Initial = () => {
           <Header categories={Categories} />
           <HeroTop />
           <Services />
+          <Clients/>
           <Us />
           <Partners />
           <HeroBottom />

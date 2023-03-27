@@ -1,0 +1,52 @@
+@import '../Variables'
+
+.gallery
+    display: grid
+    justify-items: center
+    grid-area: clients
+    grid-template-columns: repeat(2,minmax(25%, 1fr))
+    grid-template-rows: 1fr
+    grid-auto-flow: dense
+    grid-gap: .5rem
+    .grid
+        background: linear-gradient(to bottom, #ABC3FF99 60%, $primary-color)
+        border-radius: 15px
+        width: 100%
+        height: auto
+        display: flex
+        justify-content: center
+        align-items: center
+        img
+            width: 100px
+            height: 100px
+            object-fit: contain
+    .hor-size
+        grid-colcolumn: span 1
+    .big-size
+        grid-column: span 1
+        grid-row: span 1
+
+
+@media (min-width: $break-small)
+    .gallery
+        grid-template-columns: repeat(2,minmax(40%, 1fr))
+        .grid
+            width: 100%
+        .hor-size
+            grid-column: span 1
+        .big-size
+            grid-column: span 1
+            grid-row: span 1
+
+
+@media (min-width: $break-medium)
+    .gallery
+        grid-template-columns: repeat(auto-fit,minmax(200px, 1fr))
+        grid-template-rows: repeat(auto-fit,minmax(250px, 1fr))
+        .grid
+            width: 100%
+        .hor-size
+            grid-column: span 2
+        .big-size
+            grid-column: span 2
+            grid-row: span 2
