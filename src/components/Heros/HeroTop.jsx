@@ -1,16 +1,28 @@
-import React from 'react'
+import { useEffect, useState } from 'react'
 import '../../styles/HeroTop.sass'
 import Budget from '../Buttons/BudgetButton'
 import ContactUsMobile from '../Buttons/ContactUsMobile'
 import ContactUsTablet from '../Buttons/ContactUsTablet'
+import { getFirestore, doc, getDoc } from 'firebase/firestore';
 
 const HeroTop = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(()=>{
+    const querydb = getFirestore();
+    const queryDoc = doc(querydb, 'heros', 'JzobfoQknmw3jY6Onpvb');
+      getDoc(queryDoc)
+      .then(res => setData({ id: res.id, ...res.data() }))
+  })
+
 	return (
     <div className='hero-top-container'>
-      <img src='https://elementor.com/cdn-cgi/image/f=auto,w=1200,h=628/marketing/wp-content/uploads/sites/9/2017/08/background-post.png' alt='Overlay' />
+      <div className='image-container'>
+        <img src={data.image} alt='Overlay' />
+      </div>
       <div className='hero-top-text'>
-        <h2>Lorem ipsum dolor sit amet consectetur. Arcu proin viverra</h2>
-        <p>Nunc et rhoncus vitae malesuada praesent urna nulla ultricies. Est et facilisi bibendum feugiat adipiscing duis tindcidunt semper. Risus euismod mi cursus euismod justo ac.</p>
+        <h2>{data.title}</h2>
+        <p>{data.paragraph}</p>
         <ContactUsMobile/>
         <ContactUsTablet />
         <Budget />
