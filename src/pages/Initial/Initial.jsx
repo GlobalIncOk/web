@@ -1,6 +1,8 @@
-import React from 'react';
-import { BrowserRouter, Routes } from 'react-router-dom';
-import { Layout, Header, BudgetContainer, Services, Clients, Us } from '../../containers/index';
+import React from 'react'
+import { BrowserRouter, Routes } from 'react-router-dom'
+import { HeroTop, HeroBottom } from '../../components/index'
+import { Layout, Header, Services, Clients, Us } from '../../containers/index'
+import Partners from '../../containers/Partners/Partners'
 
 const Initial = () => {
 
@@ -16,10 +18,12 @@ const Initial = () => {
     <BrowserRouter>
         <Layout>
           <Header categories={Categories} />
-          <BudgetContainer/>
+          <HeroTop />
           <Services />
           <Clients/>
           <Us />
+          <Partners />
+          <HeroBottom />
           <Routes>
             {/* <Route exact path='/' element={<Landing />} />
             <Route exact path='/catalog' element={<ItemListContainer />} />
@@ -33,7 +37,7 @@ const Initial = () => {
           {/* <Footer /> */}
         </Layout>
   </BrowserRouter>
-  );
-};
+  )
+}
 
-export default Initial;
+export default Initial

@@ -1,23 +1,20 @@
 @import '../Variables'
 
-.btncontainer
+.contactusdesktop-container
 	display: none
 
-@media (min-width: $break-medium)
-	.btncontainer
+@media (min-width: $break-large)
+	.contactusdesktop-container
 		display: flex
-		justify-content: center
-		padding-right:  6.66667vw
-		padding-left: 1vw
 
-	.contact
+	.contactusdesktop
 		width: 9.0625rem
 		height: 3.25rem
 		background: transparent
 		border-radius: .5rem
-		border: .25rem solid $header-font-color
+		border: .125rem solid $header-secondary-background
 		cursor: pointer
-		color: $header-font-color
+		color: $header-secondary-background
 		font-size: 1rem
 		font-weight: 600
 		line-height: 1.25rem

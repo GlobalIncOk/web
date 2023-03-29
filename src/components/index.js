@@ -1,24 +1,14 @@
-export { default as NavBar } from './NavBar/NavBar';
-export { default as Card } from './Card/Card';
-export { default as Contact } from './Buttons/Contact/Contact';
-export { default as ServicesTitle } from './Titles/Services/ServicesTitle';
-export { default as UsTitle } from './Titles/Us/UsTitle';
-export { default as BudgetButton } from './Budget/BudgetButton';
-export { default as BudgetTitle } from './Budget/BudgetTitle'
-export { default as People } from './People/People';
-export { default as ClientsTitle} from "./ClientsTitle/ClientsTitle"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-export { default as GalleryClients } from "./GalleryClients/GalleryClients"
+export { default as ClientsTitle} from './ClientsTitle/ClientsTitle'
+export { default as GalleryClients } from './GalleryClients/GalleryClients'
+export { default as NavBar } from './NavBar/NavBar'
+export { default as ContactUsDesktop } from './Buttons/ContactUsDesktop'
+export { default as ContactUsMobile } from './Buttons/ContactUsMobile'
+export { default as ServicesTitle } from './Titles/ServicesTitle'
+export { default as ServiceCard } from './Cards/ServiceCard'
+export { default as UsTitle } from './Titles/UsTitle'
+export { default as UsCard } from './Cards/UsCard'
+export { default as PartnersTitle } from './Titles/PartnersTitle'
+export { default as PartnerCard } from './Cards/PartnerCard'
+export { default as HeroTop } from './Heros/HeroTop'
+export { default as HeroBottom } from './Heros/HeroBottom'
+export { default as BudgetButton } from './Buttons/BudgetButton'
