@@ -1,4 +1,4 @@
-export { default as ClientsTitle} from './ClientsTitle/ClientsTitle'
+export { default as ClientsTitle } from './ClientsTitle/ClientsTitle'
 export { default as GalleryClients } from './GalleryClients/GalleryClients'
 export { default as NavBar } from './NavBar/NavBar'
 export { default as ContactUsDesktop } from './Buttons/ContactUsDesktop'

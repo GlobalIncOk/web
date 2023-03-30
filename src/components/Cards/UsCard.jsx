@@ -1,9 +1,9 @@
 import React from 'react'
 import '../../styles/UsCard.sass'
-import { FaAppStore } from "react-icons/fa"
+import { FaAppStore } from 'react-icons/fa'
 
 const UsCard = () => {
-	return (
+  return (
     <div className='us-list'>
       <div className='us-card-container'>
         <FaAppStore className='us-image' />
@@ -14,7 +14,7 @@ const UsCard = () => {
         <h1>Nunc et rhoncus vitae</h1>
       </div>
     </div>
-	)
+  )
 }
 
 export default UsCard
