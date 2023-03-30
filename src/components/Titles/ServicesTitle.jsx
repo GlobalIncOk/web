@@ -1,3 +1,4 @@
+import React from 'react'
 import '../../styles/ServicesTitle.sass'
 
 const ServicesTitle = () => {
@@ -10,7 +11,7 @@ const ServicesTitle = () => {
           euismod justo ac.</p>
       </div>
     </>
-  );
-};
+  )
+}
 
 export default ServicesTitle

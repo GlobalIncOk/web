@@ -1,3 +1,4 @@
+import React from 'react'
 import { PartnerCard, PartnersTitle } from '../../components'
 import '../../styles/Partners.sass'
 
