@@ -1,6 +1,7 @@
+import React from 'react'
 import '../../../styles/Icons.sass'
 
-import { Link } from "react-scroll"
+import { Link } from 'react-scroll'
 
 const BrandLogo = () => {
   return (

@@ -5,7 +5,7 @@ import ContactUsMobile from '../Buttons/ContactUsMobile'
 import ContactUsTablet from '../Buttons/ContactUsTablet'
 
 const HeroTop = () => {
-	return (
+  return (
     <div className='hero-top-container' id='HeroTop'>
       <img src='https://elementor.com/cdn-cgi/image/f=auto,w=1200,h=628/marketing/wp-content/uploads/sites/9/2017/08/background-post.png' alt='Overlay' />
       <div className='hero-top-text'>
@@ -16,7 +16,7 @@ const HeroTop = () => {
         <Budget />
       </div>
     </div>
-	)
+  )
 }
 
 export default HeroTop

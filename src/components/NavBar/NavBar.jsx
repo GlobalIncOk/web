@@ -1,20 +1,20 @@
 import '../../styles/NavBar.sass'
 import PropTypes from 'prop-types'
-import React from "react"
 
 import { HiMenu, HiX } from 'react-icons/hi'
-import { useState } from 'react'
-import { Link } from "react-scroll"
+import { React, useState } from 'react'
+import { Link } from 'react-scroll'
 
 const NavBar = () => {
-	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const handleOnClick = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
   }
 
   return (
     <div className='nabvar'>
-      {isMobileMenuOpen ? (
+      {isMobileMenuOpen
+        ? (
         <nav className='mobile-menu'>
           <Link activeClass="active" to="HeroTop" smooth={true} offset={-70} duration={500} className="list">
             Inicio
@@ -29,15 +29,18 @@ const NavBar = () => {
             Nosotros
           </Link>
         </nav>
-      ) : (
-        ""
-      )}
+          )
+        : (
+            ''
+          )}
 
-      {isMobileMenuOpen ? (
+      {isMobileMenuOpen
+        ? (
         <HiX className='mobile-menu-button' onClick={handleOnClick} />
-      ) : (
+          )
+        : (
         <HiMenu className='mobile-menu-button' onClick={handleOnClick} />
-      )}
+          )}
 
       <nav className='desktop-menu'>
         <Link activeClass="active" to="HeroTop" smooth={true} offset={-70} duration={500} className="list">
@@ -58,7 +61,7 @@ const NavBar = () => {
 }
 
 NavBar.propTypes = {
-  categories: PropTypes.array.isRequired,
+  categories: PropTypes.array.isRequired
 }
 
 export default NavBar

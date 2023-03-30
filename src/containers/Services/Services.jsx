@@ -1,3 +1,4 @@
+import React from 'react'
 import { ServiceCard, ServicesTitle } from '../../components'
 import '../../styles/Services.sass'
 

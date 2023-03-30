@@ -1,3 +1,4 @@
+import React from 'react'
 import '../../styles/UsTitle.sass'
 
 const UsTitle = () => {
@@ -10,7 +11,7 @@ const UsTitle = () => {
           euismod justo ac.</p>
       </div>
     </>
-  );
-};
+  )
+}
 
 export default UsTitle

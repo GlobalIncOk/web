@@ -1,3 +1,4 @@
+import React from 'react'
 import { UsCard, UsTitle } from '../../components'
 import '../../styles/Us.sass'
 

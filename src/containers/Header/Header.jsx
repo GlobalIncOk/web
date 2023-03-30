@@ -1,3 +1,4 @@
+import React from 'react'
 import '../../styles/Header.sass'
 
 import { NavBar, ContactUsDesktop } from '../../components/index'
