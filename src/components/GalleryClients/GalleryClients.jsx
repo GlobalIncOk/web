@@ -12,28 +12,28 @@ const GalleryClients=()=>{
     return(
         <div className="gallery">
             <div className="grid big-size">
-                <img src={imgmostaza}/>
+                <img src={imgmostaza} alt='clientlogo'/>
             </div>
             <div className="grid big-size">
-                <img src={imgvoss}/>
+                <img src={imgvoss} alt='clientlogo' />
             </div>
             <div className="grid big-size">
-                <img src={imgdrbeauty}/>
+                <img src={imgdrbeauty} alt='clientlogo' />
             </div>
             <div className="grid hor-size">
-                <img src={imgtecno}/>
+                <img src={imgtecno} alt='clientlogo' />
             </div>
             <div className="grid big-size">
-                <img src={imglabirra}/>
+                <img src={imglabirra} alt='clientlogo' />
             </div>
             <div className="grid hor-size">
-                <img src={imgcrazy}/>
+                <img src={imgcrazy} alt='clientlogo' />
             </div>
             <div className="grid hor-size">
-                <img src={imgiaa}/>
+                <img src={imgiaa} alt='clientlogo' />
             </div>
             <div className="grid hor-size">
-                <img src={imgyip}/>
+                <img src={imgyip} alt='clientlogo' />
             </div>
         </div>
     )

@@ -3,7 +3,7 @@ import '../../styles/Us.sass'
 
 const Us = () => {
   return (
-    <div className='us-container'>
+    <div className='us-container' id='Us'>
       <UsTitle />
       <UsCard />
     </div>

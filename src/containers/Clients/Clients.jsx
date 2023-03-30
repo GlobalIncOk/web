@@ -5,7 +5,7 @@ import GalleryClients  from "../../components/GalleryClients/GalleryClients"
 
 const Clients = () => {
     return(
-        <div className="clientsContainer">
+        <div className="clientsContainer" id='Clients'>
             <ClientsTitle/>
             <GalleryClients/>
         </div>
