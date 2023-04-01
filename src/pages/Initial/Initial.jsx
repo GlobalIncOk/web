@@ -11,7 +11,7 @@ const Initial = () => {
         <Header />
         <HeroTop />
         <Services />
-        <Clients/>
+        {/* <Clients/> */}
         <Us />
         <Partners />
         <HeroBottom />
