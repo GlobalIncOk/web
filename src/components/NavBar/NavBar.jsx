@@ -12,7 +12,7 @@ const NavBar = () => {
   }
 
   return (
-    <div className='nabvar'>
+    <div className='nabvar-container'>
       {isMobileMenuOpen
         ? (
         <nav className='mobile-menu'>
