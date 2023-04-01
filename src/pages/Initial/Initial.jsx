@@ -1,8 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Routes } from 'react-router-dom'
 import { HeroTop, HeroBottom } from '../../components/index'
-import { Layout, Header, Services, Clients, Us, Footer } from '../../containers/index'
-import Partners from '../../containers/Partners/Partners'
+import { Layout, Header, Services, Clients, Us, Footer, Staff } from '../../containers/index'
 
 const Initial = () => {
   return (
@@ -11,9 +10,9 @@ const Initial = () => {
         <Header />
         <HeroTop />
         <Services />
-        {/* <Clients/> */}
+        <Clients/>
         <Us />
-        <Partners />
+        <Staff />
         <HeroBottom />
         {/* <Routes>
           <Route exact path='/' element={<Landing />} />

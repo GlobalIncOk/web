@@ -7,8 +7,9 @@ const HeroBottom = () => {
     <div className='hero-bottom-container'>
       <div className='hero-bottom-layout'>
         <div className='hero-bottom-text'>
-          <h2>Lorem ipsum dolor sit amet consectetur. Arcu proin viverra</h2>
-          <p>Nunc et rhoncus vitae malesuada praesent urna nulla ultricies. Est et facilisi bibendum feugiat adipiscing duis tindcidunt semper. Risus euismod mi cursus euismod justo ac.</p>
+          <h2>Social media is the <span>new black.</span></h2>
+          <p>La comunicación en redes sociales se ha vuelto primordial para hacer crecer tu negocio.
+            Junto con una buena estrategia y plan de comunicación, el éxito no tiene límite.</p>
           <BudgetButton />
         </div>
       </div>
