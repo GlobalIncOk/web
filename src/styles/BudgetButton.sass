@@ -1,24 +1,25 @@
 @import '../Variables'
 
-.budget-container
-	display: none
-
-@media (min-width: $break-medium)
-	.budget-container
-		display: none
-
-@media (min-width: $break-large)
-	.budget-container
-		display: inherit
-		width: 400px
-	.budget
+.budget-button-container
+	display: inherit
+	width: 200px
+	.budget-button
 		width: 100%
-		background: linear-gradient(180deg, rgba(87,134,255,1) 80%, rgba(255,255,255,1) 100%)
-		padding: 1.5rem 1rem
+		background-color: $secondary2-color
+		padding: 16px 39px
 		border-radius: .5rem
 		border: none
 		cursor: pointer
 		color: $secondary-font-color
-		font-size: 1rem
+		font-size: 14px
 		font-weight: 600
-		line-height: 1.25rem
+		line-height: 17.5px
+
+@media (min-width: $break-medium)
+	.budget-button-container
+		width: 302px
+
+@media (min-width: $break-large)
+	.budget-button-container
+		display: inherit
+		width: 400px

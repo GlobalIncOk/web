@@ -1,17 +1,51 @@
 @import '../Variables'
 
-.brandlogo
-  background-image: url('../assets/Images/GlobalIncLogoMobile.png')
+.brand-logo
+  background-image: url('../assets/Images/Logos/GlobalIncLogo.png')
   background-repeat: no-repeat, repeat
-  height: 3rem
+  background-size: contain
+  height: 1rem
+  width: 9.25rem
   cursor: pointer
 
 @media (min-width: $break-medium)
-  .brandlogo
-    background-image: url('../assets/Images/GlobalIncLogoTablet.png')
-    height: 4.25rem
+  .brand-logo
+    height: 20px
+    width: 11.875rem
+
+.footerlogo
+  background-image: url('../assets/Images/Logos/FooterLogoMobile.png')
+  background-repeat: no-repeat, repeat
+  height: 75px
+  width: 318px
+  cursor: pointer
+  align-self: center
+
+@media (min-width: $break-medium)
+  .footerlogo
+    background-image: url('../assets/Images/Logos/FooterLogoDesktop.png')
+    background-size: cover
+    height: 210px
+    width: 184px
 
 @media (min-width: $break-large)
-  .brandlogo
-    background-image: url('../assets/Images/GlobalIncLogoDesktop.png')
-    height: 4.5rem
+  .footerlogo
+    background-image: url('../assets/Images/Logos/FooterLogoDesktop.png')
+    height: 210px
+    width: 184px
+    background-size: cover
+
+.socials
+  display: flex
+  justify-content: center
+  gap: 8px
+  :nth-child(-n+3)
+    height: 3.5rem
+    width: 3.5rem
+    cursor: pointer
+  .facebook
+    background-image: url('../assets/Icons/Socials/FaceMobile.png')
+  .linkedin
+    background-image: url('../assets/Icons/Socials/LinkMobile.png')
+  .instagram
+    background-image: url('../assets/Icons/Socials/InstaMobile.png')

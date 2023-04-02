@@ -1,0 +1,20 @@
+@import '../Variables'
+
+.contactus-container
+	display: none
+
+@media (min-width: $break-large)
+	.contactus-container
+		display: flex
+
+	.contactus
+		width: 9.0625rem
+		height: 3.25rem
+		background: transparent
+		border-radius: .5rem
+		border: .125rem solid $primary-background
+		cursor: pointer
+		color: $secondary-font-color
+		font-size: 1rem
+		font-weight: 600
+		line-height: 1.25rem

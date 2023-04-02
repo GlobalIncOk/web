@@ -3,8 +3,8 @@ import '../../styles/BudgetButton.sass'
 
 const BudgetButton = () => {
   return (
-    <div className='budget-container'>
-      <button className='budget'>Pedir cotización</button>
+    <div className='budget-button-container'>
+      <button className='budget-button'>Pedir presupuesto</button>
     </div>
   )
 }

@@ -1,8 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { HeroTop, HeroBottom, ClientDetail } from '../../components/index'
-import { Layout, Header, Services, Clients, Us } from '../../containers/index'
-import Partners from '../../containers/Partners/Partners'
+import { Layout, Header, Services, Clients, Us, Footer, Staff } from '../../containers/index'
 
 const Initial = () => {
   return (
@@ -14,18 +13,18 @@ const Initial = () => {
         <Routes>
           <Route path='/' element={<Clients/>}/>
           <Route path='/:client' element={<ClientDetail />} />
-          {/* <Route exact path='/' element={<Landing />} />
+        </Routes>
+        <Us />
+        <Staff />
+        <HeroBottom />
+        {/*<Routes>
+          <Route exact path='/' element={<Landing />} />
           <Route exact path='/catalog' element={<ItemListContainer />} />
           <Route exact path='/category/:id' element={<ItemListContainer />} />
           <Route exact path='/:id' element={<ItemDetailContainer />} />
           <Route exact path='/cart' element={<CartContainer />} />
           <Route exact path='/register' element={<Register />} />
           <Route exact path='/checkout' element={<Order />} />
-          <Route exact path='*' element={<ErrorPage />} /> */}
-        </Routes>
-        <Us />
-        <Partners />
-        <HeroBottom />
         {/* <Footer /> */}
       </Layout>
     </BrowserRouter>

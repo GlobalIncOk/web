@@ -1,13 +1,14 @@
 import React from 'react'
 import {Link} from "react-router-dom"
-import imgcrazy from '../../assets/Images/clientCrazy.svg'
-import imgdrbeauty from '../../assets/Images/clientDrBeauty.svg'
-import imgiaa from '../../assets/Images/clientIAA.svg'
-import imglabirra from '../../assets/Images/clientLaBirra.svg'
-import imgmostaza from '../../assets/Images/clientMostaza.svg'
-import imgtecno from '../../assets/Images/clientTecno.svg'
-import imgyip from '../../assets/Images/clientYip.svg'
-import imgvoss from '../../assets/Images/clientVoss.svg'
+import imgcrazy from '../../assets/Images/Clients/clientCrazy.svg'
+import imgdrbeauty from '../../assets/Images/Clients/clientDrBeauty.svg'
+import imgiaa from '../../assets/Images/Clients/clientIAA.svg'
+import imglabirra from '../../assets/Images/Clients/clientLaBirra.svg'
+import imgmostaza from '../../assets/Images/Clients/clientMostaza.svg'
+import imgtecno from '../../assets/Images/Clients/clientTecno.svg'
+import imgyip from '../../assets/Images/Clients/clientYip.svg'
+import imgvoss from '../../assets/Images/Clients/clientVoss.svg'
+
 import '../../styles/GalleryClients.sass'
 const GalleryClients = () => {
   return (
