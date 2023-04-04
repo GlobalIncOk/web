@@ -5,8 +5,10 @@ const WorldTitle = () => {
   return (
     <>
       <div className='maptext-container'>
-        <p>Copyright @ GLOBAL INC 2023</p>
-        <p>Todos los derechos reservados</p>
+        <p>Nunc et rhoncus vitae malesuada praesent urna nulla ultricies.
+           Est et facilisi bibendum feugiat adipiscing duis tincidunt semper.
+           Risus euismod mi cursus euismod justo ac. Risus euismod mi cursus euismod justo ac.
+           isus euismod mi cursus euismod justo ac.</p>
       </div>
     </>
   )
