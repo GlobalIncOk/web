@@ -17,14 +17,14 @@ const Initial = () => {
         <Us />
         <Staff />
         <HeroBottom />
-        {/*<Routes>
+        {/* <Routes>
           <Route exact path='/' element={<Landing />} />
           <Route exact path='/catalog' element={<ItemListContainer />} />
           <Route exact path='/category/:id' element={<ItemListContainer />} />
           <Route exact path='/:id' element={<ItemDetailContainer />} />
           <Route exact path='/cart' element={<CartContainer />} />
           <Route exact path='/register' element={<Register />} />
-          <Route exact path='/checkout' element={<Order />} />
+          <Route exact path='/checkout' element={<Order />} /> */}
         {/* <Footer /> */}
       </Layout>
     </BrowserRouter>
