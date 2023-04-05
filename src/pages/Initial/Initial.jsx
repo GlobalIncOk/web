@@ -1,6 +1,6 @@
 import React from 'react'
-import { BrowserRouter, Routes } from 'react-router-dom'
-import { HeroTop, HeroBottom } from '../../components/index'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HeroTop, HeroBottom, ClientDetail } from '../../components/index'
 import { Layout, Header, Services, Clients, Us, Footer, Staff, World } from '../../containers/index'
 
 const Initial = () => {
@@ -10,12 +10,15 @@ const Initial = () => {
         <Header />
         <HeroTop />
         <Services />
-        <Clients/>
+        <Routes>
+          <Route path='/' element={<Clients/>}/>
+          <Route path='/:client' element={<ClientDetail />} />
+        </Routes>
         <Us />
         <World />
         <Staff />
         <HeroBottom />
-        {/* <Routes>
+        {/*<Routes>
           <Route exact path='/' element={<Landing />} />
           <Route exact path='/catalog' element={<ItemListContainer />} />
           <Route exact path='/category/:id' element={<ItemListContainer />} />
@@ -23,8 +26,6 @@ const Initial = () => {
           <Route exact path='/cart' element={<CartContainer />} />
           <Route exact path='/register' element={<Register />} />
           <Route exact path='/checkout' element={<Order />} />
-          <Route exact path='*' element={<ErrorPage />} />
-        </Routes> */}
         {/* <Footer /> */}
       </Layout>
     </BrowserRouter>

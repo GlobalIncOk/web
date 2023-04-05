@@ -16,3 +16,6 @@ export { default as FooterContent } from './FooterContent/FooterContent'
 export { default as Copyright } from './Copyright/Copyright'
 export { default as WorldTitle } from './Titles/WorldTitle'
 export { default as WorldCard } from './Cards/WorldCard'
+export { default as ClientDetail } from './ClientDetail/ClientDetail'
+export { default as GalleryClientDetail } from './ClientDetail/GalleryClientDetail'
+
