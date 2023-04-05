@@ -11,23 +11,23 @@ import imgyip from '../../assets/Images/Clients/clientYip.svg'
 import '../../styles/Gallery.sass'
 
 const clients = [
-  { id: 1, src: imgmostaza },
-  { id: 2, src: imgvoss },
-  { id: 3, src: imgdrbeauty },
-  { id: 4, src: imglabirra },
-  { id: 5, src: imgtecno },
-  { id: 6, src: imgcrazy },
-  { id: 7, src: imgiaa },
-  { id: 8, src: imgyip }
+  { id: 1, name: 'mostaza', src: imgmostaza },
+  { id: 2, name: 'voss', src: imgvoss },
+  { id: 3, name: 'drbeauty', src: imgdrbeauty },
+  { id: 4, name: 'labirra', src: imglabirra },
+  { id: 5, name: 'tecno', src: imgtecno },
+  { id: 6, name: 'crazy', src: imgcrazy },
+  { id: 7, name: 'iaa', src: imgiaa },
+  { id: 8, name: 'yip', src: imgyip }
 ];
 
 const Gallery = () => {
   return (
     <div className="gallery-container">
       {clients.map((client) => (
-        <Link key={client.id} to={`/client/${client.id}`} target="_self" className={`card-${client.id}`} rel="noopener noreferrer">
+        <Link key={client.id} to={`/clients/${client.name}`} target="_self" className={`card-${client.id}`} rel="noopener noreferrer">
           <div className='images'>
-            <img src={client.src} alt={`Image ${client.id}`} />
+            <img src={client.src} alt={`Image ${client.name}`} />
           </div>
         </Link>
       ))}
