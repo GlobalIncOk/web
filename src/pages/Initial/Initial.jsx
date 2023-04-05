@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { HeroTop, HeroBottom, ClientDetail } from '../../components/index'
-import { Layout, Header, Services, Clients, Us, Footer, Staff } from '../../containers/index'
+import { Layout, Header, Services, Clients, Us, Footer, Staff, World } from '../../containers/index'
 
 const Initial = () => {
   return (
@@ -15,6 +15,7 @@ const Initial = () => {
           <Route path='/:client' element={<ClientDetail />} />
         </Routes>
         <Us />
+        <World />
         <Staff />
         <HeroBottom />
         {/*<Routes>
