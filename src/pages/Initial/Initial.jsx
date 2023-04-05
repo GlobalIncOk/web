@@ -10,22 +10,15 @@ const Initial = () => {
         <Header />
         <HeroTop />
         <Services />
-        <Routes>
+        <Clients/>
+        {/* <Routes>
           <Route path='/' element={<Clients/>}/>
           <Route path='/:client' element={<ClientDetail />} />
-        </Routes>
+        </Routes> */}
         <Us />
         <Staff />
         <HeroBottom />
-        {/*<Routes>
-          <Route exact path='/' element={<Landing />} />
-          <Route exact path='/catalog' element={<ItemListContainer />} />
-          <Route exact path='/category/:id' element={<ItemListContainer />} />
-          <Route exact path='/:id' element={<ItemDetailContainer />} />
-          <Route exact path='/cart' element={<CartContainer />} />
-          <Route exact path='/register' element={<Register />} />
-          <Route exact path='/checkout' element={<Order />} />
-        {/* <Footer /> */}
+        <Footer />
       </Layout>
     </BrowserRouter>
   )
