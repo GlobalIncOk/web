@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { HeroTop, HeroBottom, ClientDetail } from '../../components/index'
 import { Layout, Header, Services, Clients, Us, Footer, Staff } from '../../containers/index'
+import ClientsPages from '../ClientsPages/ClientsPages'
 
 const Initial = () => {
   return (
@@ -11,14 +12,13 @@ const Initial = () => {
         <HeroTop />
         <Services />
         <Clients/>
-        {/* <Routes>
-          <Route path='/' element={<Clients/>}/>
-          <Route path='/:client' element={<ClientDetail />} />
-        </Routes> */}
+        <Routes>
+          <Route path='/clients/:name' element={<ClientsPages />} />
+        </Routes>
         <Us />
         <Staff />
         <HeroBottom />
-        <Footer />
+        {/* <Footer /> */}
       </Layout>
     </BrowserRouter>
   )

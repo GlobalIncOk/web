@@ -1,5 +1,10 @@
 @import '../Variables'
 
+img
+  width: 50%
+  height: 50%
+  object: cover-fit
+
 .gallery-container
   display: flex
   flex-wrap: wrap
@@ -7,7 +12,7 @@
   align-items: center
   gap: 14px
   margin-top: 18px
-  .card-a
+  .images
     background: linear-gradient(to bottom, #ABC3FF99 60%, $primary-color)
     border-radius: 16px
     width: 200px
@@ -15,18 +20,6 @@
     display: flex
     justify-content: center
     align-items: center
-  .card-b
-    background: linear-gradient(to bottom, #ABC3FF99 60%, $primary-color)
-    border-radius: 16px
-    width: 200px
-    height: 180px
-    display: flex
-    justify-content: center
-    align-items: center
-  img
-    width: 50%
-    height: 50%
-    object: cover-fit
 
 @media (min-width: $break-medium)
   .gallery-container
@@ -52,6 +45,7 @@
     :nth-child(5)
       grid-column: 1 / 5 !important
       grid-row: 2 !important
+      height: 127px !important
       align-self: baseline
     :nth-child(6)
       grid-column: 9 / 13 !important
@@ -65,9 +59,14 @@
       grid-column: 9 / 13 !important
       grid-row: 2 !important
       align-self: end
-    .card-a
+    .images
       width: 400px
       height: 288px
-    .card-b
-      width: 400px
-      height: 136px
+    .card-5 .images
+      height: 127px
+    .card-6 .images
+      height: 127px
+    .card-7 .images
+      height: 127px
+    .card-8 .images
+      height: 127px

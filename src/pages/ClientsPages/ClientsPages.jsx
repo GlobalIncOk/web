@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { ClientDetail } from '../../components/index'
 import { Header, Footer } from '../../containers/index'
+import { useParams } from 'react-router-dom';
 
-const Initial = () => {
+const ClientsPages = () => {
+  const { id } = useParams()
+
   return (
     <>
       <Header />
@@ -12,4 +15,4 @@ const Initial = () => {
   )
 }
 
-export default Initial
+export default ClientsPages
