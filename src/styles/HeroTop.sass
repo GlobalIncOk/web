@@ -1,11 +1,8 @@
 @import '../Variables'
 
 .hero-top-container
-  background-image: url('../assets/Images/ImagenTopBottom.webp')
-  background-repeat: no-repeat, repeat
-  background-size: 231px 274px
-  background-position-x: right
-  margin-top: 2rem
+  background: linear-gradient(180deg, #5786FF 0%, rgba(43, 67, 127, 0.77) 100%)
+  max-height: 665px
   .hero-top-layout
     display: grid
     grid-template-columns: repeat(4, 1fr)
@@ -26,6 +23,7 @@
     justify-content: center
     align-items: flex-start
     text-align: justify
+    color: $secondary-font-color
     h2
       margin-top: 0
       font-size: 1.25rem
@@ -33,48 +31,53 @@
       line-height: 1.5625rem
       margin: 0
     span
-      color: $terciary-color
+      color: $font-color
     p
       margin: 4vh 0
       font-size: .875rem
       font-weight: 400
       line-height: 1.0938rem
 
-@media (min-width: $break-medium)
-  .hero-top-container
-    background-size: 483px 337px
-    margin-top: 3rem
-    .hero-top-layout
-      grid-template-columns: repeat(8, 1fr)
-      grid-gap: 1.5rem
-      margin: 0 4.5rem
-      img
-        grid-column: 5 / 9
-        height: 21.0625rem
+// @media (min-width: $break-medium)
+//   .hero-top-container
 
-    .hero-top-text
-      grid-column: 1 / 6
-      h2
-        font-size: 2.125rem
-        font-weight: 400
-        line-height: 2.6563rem
-      p
-        margin: 4vh 0 6vh 0
+//     .hero-top-layout
+//       grid-template-columns: repeat(8, 1fr)
+//       grid-gap: 1.5rem
+//       margin: 0 4.5rem
+//       img
+//         grid-column: 5 / 9
+//         height: 21.0625rem
+
+//     .hero-top-text
+//       grid-column: 1 / 6
+//       h2
+//         font-size: 2.125rem
+//         font-weight: 400
+//         line-height: 2.6563rem
+//       p
+//         margin: 4vh 0 6vh 0
 
 @media (min-width: $break-large)
   .hero-top-container
-    background-size: 708px 403px
-    margin-top: 4rem
+    padding-top: 60px
     .hero-top-layout
       grid-template-columns: repeat(12, 1fr)
       grid-gap: 1.5rem
       margin: 0 6rem
-      img
+      :nth-child(1)
+        grid-column: 1 / 7
+      :nth-child(2)
         grid-column: 7 / 13
-        height: 25.1875rem
+
+    .hero-image
+      height: 28.8125rem
+      background-image: url('../assets/Images/ImagenTopBottom.png')
+      background-position-x: right
+      background-repeat: no-repeat
 
     .hero-top-text
-      grid-column: 1 / 9
+      grid-column: 1 / 7
       h2
         font-size: 3rem
         font-weight: 400

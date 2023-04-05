@@ -1,4 +1,5 @@
 import React from 'react'
+import { HeroTopCurve } from '../../assets'
 import '../../styles/HeroTop.sass'
 import BudgetButton from '../Buttons/BudgetButton'
 
@@ -12,7 +13,9 @@ const HeroTop = () => {
             Junto con una buena estrategia y plan de comunicación, el éxito no tiene límite.</p>
           <BudgetButton />
         </div>
+        <div className='hero-image'></div>
       </div>
+      <HeroTopCurve />
     </div>
   )
 }
