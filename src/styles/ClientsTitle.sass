@@ -1,17 +1,37 @@
 @import '../Variables'
 
-.clientsTitle
-  display:grid
-  grid-area: title
+.clients-header
   display: flex
   flex-direction: column
-  justify-content: center
   align-items: center
-  text-align: center
-  padding: 2rem
+  margin: 0
   h2
+    font-size: 20px
+    font-weight: 400
+    line-height: 25px
     margin: 0
-    padding: .5rem 0
   p
+    text-align: center
+    font-size: .875rem
+    font-weight: 400
+    line-height: 1.0938rem
+    padding: 0 .25rem
     margin: 0
-    padding: 1rem 0
+
+@media (min-width: $break-medium)
+  .clients-header
+    h2
+      font-size: 34px
+      line-height: 42.5px
+    p
+      font-size: 16px
+      line-height: 20px
+
+@media (min-width: $break-large)
+  .clients-header
+    h2
+      font-size: 34px
+      line-height: 42.5px
+    p
+      font-size: 16px
+      line-height: 20px
