@@ -1,0 +1,40 @@
+@import '../Variables'
+
+.jvectormap-container
+  svg
+    width: 100%
+    height: 260px
+    margin-top: 20px
+
+.jvectormap-tip
+  position: absolute
+  display: none
+  border: solid 1px #CDCDCD
+  -webkit-border-radius: 3px
+  -moz-border-radius: 3px
+  border-radius: 3px
+  background: #292929
+  color: white
+  font-family: sans-serif, Verdana
+
+@media (min-width: $break-medium)
+  .jvectormap-container
+    svg
+      height: 395px
+
+@media (min-width: $break-large)
+  .jvectormap-container
+    svg
+      height: 565px
+      margin-top: 0
+
+  .jvectormap-tip
+    position: absolute
+    display: none
+    border: solid 1px #CDCDCD
+    -webkit-border-radius: 3px
+    -moz-border-radius: 3px
+    border-radius: 3px
+    background: #292929
+    color: white
+    font-family: sans-serif, Verdana

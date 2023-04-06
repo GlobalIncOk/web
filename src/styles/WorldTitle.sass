@@ -1,0 +1,24 @@
+@import '../Variables'
+
+.maptext-container
+  p
+    text-align: center
+    font-size: 14px
+    font-weight: 400
+    line-height: 17.5px
+    margin: 0 0 44px 0
+    text-align: center
+    color: $secondary-font-color
+
+@media (min-width: $break-medium)
+.maptext-container
+  p
+    font-size: 16px
+    line-height: 20px
+    margin: 0 0 70px 0
+
+@media (min-width: $break-large)
+  .maptext-container
+    p
+      text-align: justify
+      margin: 0
