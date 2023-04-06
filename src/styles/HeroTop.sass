@@ -1,23 +1,19 @@
 @import '../Variables'
 
 .hero-top-container
-  background: linear-gradient(180deg, #5786FF 0%, rgba(43, 67, 127, 0.77) 100%)
-  max-height: 665px
+  background: linear-gradient(180deg, #252525 0%, #2680E8 100%)
+  padding-top: 22px
   .hero-top-layout
-    display: grid
-    grid-template-columns: repeat(4, 1fr)
-    grid-gap: 1rem
     margin: 0 2rem
-    img
-      grid-row: 1
-      grid-column: 3 / 5
-      object-fit: cover
-      height: 17.125rem
-      justify-self: flex-start
-
+    position: relative
+  .hero-image
+    height: 168px
+    background-image: url('../assets/Images/ImagenTopBottom.png')
+    background-repeat: no-repeat
+    background-size: contain
+    background-position-x: right
   .hero-top-text
-    grid-row: 1
-    grid-column: 1 / 4
+    line-break: loose
     display: flex
     flex-direction: column
     justify-content: center
@@ -25,15 +21,14 @@
     text-align: justify
     color: $secondary-font-color
     h2
-      margin-top: 0
       font-size: 1.25rem
       font-weight: 400
       line-height: 1.5625rem
-      margin: 0
+      margin: 0 0 16px 0
     span
-      color: $font-color
+      color: $terciary-color
     p
-      margin: 4vh 0
+      margin: 0
       font-size: .875rem
       font-weight: 400
       line-height: 1.0938rem
@@ -72,9 +67,7 @@
 
     .hero-image
       height: 28.8125rem
-      background-image: url('../assets/Images/ImagenTopBottom.png')
       background-position-x: right
-      background-repeat: no-repeat
 
     .hero-top-text
       grid-column: 1 / 7

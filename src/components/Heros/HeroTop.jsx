@@ -9,8 +9,9 @@ const HeroTop = () => {
       <div className='hero-top-layout'>
         <div className='hero-top-text'>
           <h2>Social media is the <span>new black.</span></h2>
-          <p>La comunicación en redes sociales se ha vuelto primordial para hacer crecer tu negocio.
-            Junto con una buena estrategia y plan de comunicación, el éxito no tiene límite.</p>
+          <p>Hoy en día la presencia en los medios sociales y plataformas digitales se volvieron fundamentales.</p>
+          <p>Con la estrategia de comunicación correcta, y el equipo correcto -nosotros- podes hacer crecer tu público como nunca te imaginaste.</p>
+          <p>Sumate a esta nueva tendencia the new black para hacer crecer tu negocio.</p>
           <BudgetButton />
         </div>
         <div className='hero-image'></div>
