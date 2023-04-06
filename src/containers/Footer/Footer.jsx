@@ -1,14 +1,17 @@
 import React from 'react'
+import { FooterLogo } from '../../assets'
+import { FooterContact, FooterCopyright, FooterMenu } from '../../components'
 import '../../styles/Footer.sass'
 
-import { FooterContent, FooterTitle  } from '../../components/index'
 
 const Footer = () => {
   return (
     <div className='footer-container'>
       <div className='footer-layout' >
-        <FooterTitle />
-        <FooterContent />
+        <FooterLogo />
+        <FooterMenu />
+        <FooterCopyright />
+        <FooterContact />
       </div>
     </div>
   )

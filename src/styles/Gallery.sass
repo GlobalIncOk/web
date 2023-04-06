@@ -3,7 +3,7 @@
 img
   width: 50%
   height: 50%
-  object: cover-fit
+  object-fit: contain
 
 .gallery-container
   display: flex
@@ -11,7 +11,6 @@ img
   justify-content: space-between
   align-items: center
   gap: 14px
-  margin-top: 18px
   .images
     background: linear-gradient(to bottom, #ABC3FF99 60%, $primary-color)
     border-radius: 16px
@@ -25,7 +24,6 @@ img
   .gallery-container
     gap: 0
     row-gap: 32px
-    margin-top: 40px
 
 @media (min-width: $break-large)
   .gallery-container

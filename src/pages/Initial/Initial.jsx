@@ -19,7 +19,7 @@ const Initial = () => {
         <World />
         <Staff />
         <HeroBottom />
-        {/* <Footer /> */}
+        <Footer />
       </Layout>
     </BrowserRouter>
   )
