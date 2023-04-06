@@ -1,12 +1,10 @@
 import React from 'react'
-import '../../styles/FooterContent.sass'
+import '../../styles/FooterMenu.sass'
 import { Link } from 'react-scroll'
-import Copyright from '../Copyright/Copyright'
-import { Socials } from '../../assets'
 
-const FooterContent = () => {
+const FooterMenu = () => {
   return (
-    <div className='footer-content'>
+    <div className='footer-content-menu'>
       <div className='footer-menu'>
         <Link activeClass="active" to="HeroTop" smooth={true} offset={-70} duration={500} className="list">
           Inicio
@@ -21,10 +19,8 @@ const FooterContent = () => {
           Nosotros
         </Link>
       </div>
-      <Socials />
-      <Copyright />
     </div>
   )
 }
 
-export default FooterContent
+export default FooterMenu
