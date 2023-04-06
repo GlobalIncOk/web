@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { HeroTop, HeroBottom, ClientDetail } from '../../components/index'
+import { HeroTop, HeroBottom, ClientDetail, Carr } from '../../components/index'
 import ClientsPages from '../ClientsPages/ClientsPages'
 import { Layout, Header, Services, Clients, Us, Footer, Staff, World } from '../../containers/index'
 
@@ -11,6 +11,7 @@ const Initial = () => {
         <Header />
         <HeroTop />
         <Services />
+        <Carr />
         <Clients/>
         <Routes>
           <Route path='/clients/:name' element={<ClientsPages />} />
