@@ -2,14 +2,15 @@
 
 .hero-top-container
   background: linear-gradient(180deg, #252525 0%, #2680E8 100%)
-  padding-top: 22px
   border-bottom: 2px solid #FFFFFF !important
+  max-height: 26rem
   .hero-top-layout
     display: grid
     grid-template-columns: repeat(4, 1fr)
     grid-gap: 1rem
     margin: 0 2rem
-    height: 325px
+    padding-top: 1rem
+    height: 18rem
     :nth-child(1)
       grid-column: 1 / 5
       grid-row: 1
@@ -18,11 +19,7 @@
       grid-row: 1
       align-self: flex-end
     .hero-image
-      display: inline-block
-      height: 168px
-      background-image: url('../assets/Images/ImagenTopBottom.png')
-      background-repeat: no-repeat
-      background-size: contain
+      display: none
 
   .hero-top-text
     display: flex
@@ -30,11 +27,10 @@
     text-align: justify
     color: $secondary-font-color
     h2
-      margin-top: 0
       font-size: 1.25rem
       font-weight: 400
       line-height: 1.5625rem
-      margin: 0
+      margin: 0 143px 0 0
     span
       color: $terciary-color
     p
@@ -45,11 +41,12 @@
 
 @media (min-width: $break-medium)
   .hero-top-container
-    padding-top: 32px
+    max-height: none
     .hero-top-layout
       grid-template-columns: repeat(8, 1fr)
       grid-gap: 1.5rem
       margin: 0 4.5rem
+      padding-top: 0
       :nth-child(1)
         grid-column: 1 / 6
         grid-row: 1
@@ -59,12 +56,17 @@
         grid-row: 1
         align-self: center
       .hero-image
+        display: inline-block
         height: 291px
+        background-image: url('../assets/Images/ImagenTopBottom.png')
+        background-repeat: no-repeat
+        background-size: contain
 
     .hero-top-text
       h2
         font-size: 2.125rem
         line-height: 2.6563rem
+        margin: 0
       p
         margin: 4vh 0 6vh 0
 
@@ -89,6 +91,6 @@
         font-size: 3rem
         line-height: 3.75rem
       p
-        margin: 32px 0 0 0
+        margin: 32px 0 32px 0
         font-size: 1.125rem
         line-height: 1.82rem

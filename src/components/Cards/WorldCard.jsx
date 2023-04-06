@@ -31,7 +31,7 @@ export default function WorldCard() {
           series={{
             regions: [
               {
-                scale: ["#252525"],
+                scale: ["red"],
                 attribute: "fill",
                 values: clientsData,
                 normalizeFunction: "polynomial",
