@@ -3,7 +3,7 @@
 .staff-list
   display: flex
   flex-wrap: wrap
-  justify-content: space-evenly
+  justify-content: center
   .staff-card-container
     display: flex
     flex-direction: column
@@ -31,7 +31,7 @@
 
 @media (min-width: $break-medium)
   .staff-list
-    flex-wrap: nowrap
+    justify-content: space-between
     .staff-card-container
       width: 25rem
       h1

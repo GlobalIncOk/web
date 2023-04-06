@@ -25,6 +25,13 @@ const StaffCard = () => {
         <h1>Filmmaker</h1>
         <p>“Lorem ipsum”</p>
       </div>
+
+      <div className='staff-card-container'>
+        <FaAppStore className='staff-image' />
+        <h1>Nicolas Severino</h1>
+        <h1>Diseñador gráfico</h1>
+        <p>“Lorem ipsum”</p>
+      </div>
     </div>
   )
 }
