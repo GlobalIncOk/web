@@ -1,5 +1,4 @@
 import '../../styles/NavBar.sass'
-import PropTypes from 'prop-types'
 
 import { HiMenu, HiX } from 'react-icons/hi'
 import { React, useState } from 'react'
@@ -61,10 +60,6 @@ const NavBar = () => {
       </nav>
     </div>
   )
-}
-
-NavBar.propTypes = {
-  categories: PropTypes.array.isRequired
 }
 
 export default NavBar

@@ -14,6 +14,7 @@ const Initial = () => {
         <Carr />
         <Clients/>
         <Routes>
+          <Route path='/' element="HeroTop" />
           <Route path='/clients/:name' element={<ClientsPages />} />
         </Routes>
         <Us />
