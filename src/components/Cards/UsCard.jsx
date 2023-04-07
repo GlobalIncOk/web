@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../styles/UsCard.sass'
-import pedro from '../../assets/Images/Us/PedroLantaron.jpg'
-import sharon from '../../assets/Images/Us/Sharon.jpg'
+import pedro from '../../assets/Images/Us/PedroLantaron.avif'
+import sharon from '../../assets/Images/Us/Sharon.avif'
 
 const UsCard = () => {
   return (

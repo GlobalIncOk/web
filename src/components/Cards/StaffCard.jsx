@@ -1,10 +1,9 @@
 import React from 'react'
 import '../../styles/StaffCard.sass'
-import marcelo from '../../assets/Images/Staff/MarceloRomero.jpg'
-import camila from '../../assets/Images/Staff/CamilaMarchegiani.jpg'
-import mariano from '../../assets/Images/Staff/MarianoDeLuca.jpg'
-import nicolas from '../../assets/Images/Staff/NicolasSeverino.jpg'
-
+import marcelo from '../../assets/Images/Staff/MarceloRomero.avif'
+import camila from '../../assets/Images/Staff/CamilaMarchegiani.avif'
+import mariano from '../../assets/Images/Staff/MarianoDeLuca.avif'
+import nicolas from '../../assets/Images/Staff/NicolasSeverino.avif'
 
 const StaffCard = () => {
   return (
