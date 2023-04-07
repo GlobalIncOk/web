@@ -1,5 +1,4 @@
 import '../../styles/NavBar.sass'
-import PropTypes from 'prop-types'
 
 import { HiMenu, HiX } from 'react-icons/hi'
 import { React, useState } from 'react'
@@ -27,6 +26,9 @@ const NavBar = () => {
           </Link>
           <Link activeClass="active" to="Us" smooth={true} offset={-70} duration={500} className="list">
             Nosotros
+          </Link>
+          <Link activeClass="active" to="/contactanos" smooth={true} offset={-70} duration={500} className="list">
+            Contáctanos
           </Link>
         </nav>
           )
@@ -58,10 +60,6 @@ const NavBar = () => {
       </nav>
     </div>
   )
-}
-
-NavBar.propTypes = {
-  categories: PropTypes.array.isRequired
 }
 
 export default NavBar

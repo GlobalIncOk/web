@@ -14,38 +14,36 @@
     width: 11.875rem
 
 .footerlogo
-  background-image: url('../assets/Images/Logos/FooterLogoMobile.png')
+  background-image: url('../assets/Images/Logos/FooterLogoDesktop.png')
   background-repeat: no-repeat, repeat
-  height: 75px
-  width: 318px
+  background-size: contain
+  height: 210px
+  width: 184px
   cursor: pointer
+  justify-self: center
   align-self: center
 
 @media (min-width: $break-medium)
   .footerlogo
-    background-image: url('../assets/Images/Logos/FooterLogoDesktop.png')
-    background-size: cover
-    height: 210px
-    width: 184px
+    padding-bottom: 109px
 
 @media (min-width: $break-large)
   .footerlogo
-    background-image: url('../assets/Images/Logos/FooterLogoDesktop.png')
-    height: 210px
-    width: 184px
-    background-size: cover
+    padding-bottom: 0
 
 .socials
   display: flex
   justify-content: center
-  gap: 8px
-  :nth-child(-n+3)
-    height: 3.5rem
-    width: 3.5rem
+  gap: 1.5rem
+  padding-top: 1.5rem
+  :nth-child(-n+2)
+    display: inline !important
+    height: 2rem
+    width: 2rem
     cursor: pointer
-  .facebook
-    background-image: url('../assets/Icons/Socials/FaceMobile.png')
+    background-repeat: no-repeat, repeat
+    background-size: contain
   .linkedin
-    background-image: url('../assets/Icons/Socials/LinkMobile.png')
+    background-image: url('../assets/Icons/Socials/Linkedin.png')
   .instagram
-    background-image: url('../assets/Icons/Socials/InstaMobile.png')
+    background-image: url('../assets/Icons/Socials/Instagram.png')

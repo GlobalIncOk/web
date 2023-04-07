@@ -1,13 +1,12 @@
 import React from 'react'
 import '../../styles/ServiceCard.sass'
-import { FaAppStore } from 'react-icons/fa'
 
-const ServiceCard = () => {
+const ServiceCard = ({ service }) => {
   return (
     <div className='service-card-container'>
-      <FaAppStore className='service-image' />
-      <h1>Marketing Digital</h1>
-      <p>Nunc et rhoncus vitae malesuada praesent urna nulla ultricies. Estz et facilisi palabra palabra palabra bibendum feugiat.</p>
+      <img src={service.src} alt={`Image ${service.name}`} className='service-image' />
+      <h1>{service.name}</h1>
+      <p>{service.description}</p>
     </div>
   )
 }

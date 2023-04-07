@@ -21,7 +21,7 @@ const ClientDetail = () =>{
             </a>
             <p>Nunc et rhoncus vitae malesuada praesent urna nulla ultricies. Nunc et rhoncus vitae malesuada praesent urna nulla ultricies. Estz  et facilisi palabra palabra palabra bibendum feugiat.</p>
             <GalleryClientDetail/>
-            <Link to="/" className="btn-back">Volver atras</Link>
+            <Link to="HeroTop" className="btn-back">Volver atras</Link>
         </div>
     )
 }

@@ -5,10 +5,9 @@ const WorldTitle = () => {
   return (
     <>
       <div className='maptext-container'>
-        <p>Nunc et rhoncus vitae malesuada praesent urna nulla ultricies.
-           Est et facilisi bibendum feugiat adipiscing duis tincidunt semper.
-           Risus euismod mi cursus euismod justo ac. Risus euismod mi cursus euismod justo ac.
-           isus euismod mi cursus euismod justo ac.</p>
+        <p>Donde haya una conexión wifi, allí estaremos.
+          Con eso solo basta hoy en día para hacer crecer tu negocio y darle presencia a tu marca.
+          Desde Argentina para todo el mundo! En todo momento y en todo lugar, te conectamos con tu cliente ideal.</p>
       </div>
     </>
   )

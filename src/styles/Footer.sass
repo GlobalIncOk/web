@@ -3,21 +3,63 @@
 .footer-container
   background-color: $secondary-background
   color: $secondary-font-color
+  max-height: 440px
+  margin-top: 39px
   .footer-layout
     display: grid
     grid-template-columns: repeat(4, 1fr)
     grid-gap: 1rem
     margin: 0 2rem
     :nth-child(1)
-      grid-column: 1 / 5
+      grid-column: 1 / 3
       grid-row: 1
     :nth-child(2)
+      display: none
+    :nth-child(3)
       grid-column: 1 / 5
       grid-row: 2
+    :nth-child(4)
+      grid-column: 3 / 5
+      grid-row: 1
 
 @media (min-width: $break-medium)
   .footer-container
+    max-height: 309px
+    margin-top: 56px
     .footer-layout
       grid-template-columns: repeat(8, 1fr)
       grid-gap: 1.5rem
       margin: 0 4.5rem
+      :nth-child(1)
+        grid-column: 1 / 3
+        grid-row: 1
+      :nth-child(2)
+        display: none
+      :nth-child(3)
+        grid-column: 3 / 7
+        grid-row: 1
+      :nth-child(4)
+        grid-column: 7 / 9
+        grid-row: 1
+
+@media (min-width: $break-large)
+  .footer-container
+    max-height: 325px
+    margin-top: 84px
+    .footer-layout
+      grid-template-columns: repeat(12, 1fr)
+      grid-gap: 1.5rem
+      margin: 0 6rem
+      :nth-child(1)
+        grid-column: 1 / 3
+        grid-row: 1
+      :nth-child(2)
+        display: flex !important
+        grid-column: 3 / 5
+        grid-row: 1
+      :nth-child(3)
+        grid-column: 6 / 9
+        grid-row: 1
+      :nth-child(4)
+        grid-column: 11 / 13
+        grid-row: 1

@@ -3,7 +3,7 @@
 .staff-list
   display: flex
   flex-wrap: wrap
-  justify-content: space-evenly
+  justify-content: center
   .staff-card-container
     display: flex
     flex-direction: column
@@ -16,7 +16,7 @@
       font-weight: 600
       line-height: 17.5px
       margin: 0
-      padding-bottom: 4px
+      padding-bottom: 8px
     p
       font-size: 14px
       font-weight: 400
@@ -27,11 +27,11 @@
       padding-bottom: 8px
       width: 120px
       height: 120px
-      background-size: contain
+      border-radius: 50%
 
 @media (min-width: $break-medium)
   .staff-list
-    flex-wrap: nowrap
+    justify-content: space-between
     .staff-card-container
       width: 25rem
       h1

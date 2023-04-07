@@ -1,89 +1,95 @@
 @import '../Variables'
 
 .hero-top-container
-  background: linear-gradient(180deg, #5786FF 0%, rgba(43, 67, 127, 0.77) 100%)
-  max-height: 665px
+  background: linear-gradient(180deg, #252525 0%, #2680E8 100%)
+  border-bottom: 2px solid #FFFFFF !important
+  max-height: 26rem
   .hero-top-layout
     display: grid
     grid-template-columns: repeat(4, 1fr)
     grid-gap: 1rem
     margin: 0 2rem
-    img
+    padding-top: 1rem
+    :nth-child(1)
+      grid-column: 1 / 5
       grid-row: 1
+    :nth-child(2)
       grid-column: 3 / 5
-      object-fit: cover
-      height: 17.125rem
-      justify-self: flex-start
+      grid-row: 1
+      align-self: flex-end
+    .hero-image
+      display: none
 
   .hero-top-text
-    grid-row: 1
-    grid-column: 1 / 4
     display: flex
     flex-direction: column
-    justify-content: center
-    align-items: flex-start
     text-align: justify
     color: $secondary-font-color
     h2
-      margin-top: 0
       font-size: 1.25rem
       font-weight: 400
       line-height: 1.5625rem
-      margin: 0
+      margin: 0 143px 0 0
     span
-      color: $font-color
+      color: $terciary-color
     p
       margin: 4vh 0
       font-size: .875rem
       font-weight: 400
       line-height: 1.0938rem
 
-// @media (min-width: $break-medium)
-//   .hero-top-container
+@media (min-width: $break-medium)
+  .hero-top-container
+    max-height: none
+    .hero-top-layout
+      grid-template-columns: repeat(8, 1fr)
+      grid-gap: 1.5rem
+      margin: 0 4.5rem
+      padding-top: 0
+      :nth-child(1)
+        grid-column: 1 / 6
+        grid-row: 1
+        align-self: center
+      :nth-child(2)
+        grid-column: 6 / 9
+        grid-row: 1
+        align-self: center
+      .hero-image
+        display: inline-block
+        height: 291px
+        background-image: url('../assets/Images/Animacion-Desktop1.gif')
+        background-repeat: no-repeat
+        background-size: contain
 
-//     .hero-top-layout
-//       grid-template-columns: repeat(8, 1fr)
-//       grid-gap: 1.5rem
-//       margin: 0 4.5rem
-//       img
-//         grid-column: 5 / 9
-//         height: 21.0625rem
-
-//     .hero-top-text
-//       grid-column: 1 / 6
-//       h2
-//         font-size: 2.125rem
-//         font-weight: 400
-//         line-height: 2.6563rem
-//       p
-//         margin: 4vh 0 6vh 0
+    .hero-top-text
+      h2
+        font-size: 2.125rem
+        line-height: 2.6563rem
+        margin: 0
+      p
+        margin: 4vh 0 6vh 0
 
 @media (min-width: $break-large)
   .hero-top-container
     padding-top: 60px
     .hero-top-layout
+      height: 325px
       grid-template-columns: repeat(12, 1fr)
       grid-gap: 1.5rem
       margin: 0 6rem
       :nth-child(1)
-        grid-column: 1 / 7
+        grid-column: 1 / 8
+        align-self: flex-start
       :nth-child(2)
-        grid-column: 7 / 13
-
-    .hero-image
-      height: 28.8125rem
-      background-image: url('../assets/Images/ImagenTopBottom.png')
-      background-position-x: right
-      background-repeat: no-repeat
+        grid-column: 8 / 13
+      .hero-image
+        height: 28.8125rem
 
     .hero-top-text
-      grid-column: 1 / 7
       h2
         font-size: 3rem
-        font-weight: 400
         line-height: 3.75rem
       p
-        margin: 4.5vh 0 7.5vh 0
+        margin: 32px 0 32px 0
         font-size: 1.125rem
-        font-weight: 400
         line-height: 1.82rem
