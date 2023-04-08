@@ -4,7 +4,7 @@ import { FaPhoneAlt, FaRegEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
 
 const FooterContact = () => {
   return (
-    <div className='footer-content'>
+    <div className='footer-content' id='ContactUs'>
       <div className='footer-list'>
         <p className='title'>Contacto</p>
         <p className='paragraph'><span><FaPhoneAlt /></span>+54 1132816522</p>

@@ -27,7 +27,7 @@ const NavBar = () => {
           <Link activeClass="active" to="Us" smooth={true} offset={-70} duration={500} className="list">
             Nosotros
           </Link>
-          <Link activeClass="active" to="/contactanos" smooth={true} offset={-70} duration={500} className="list">
+          <Link activeClass="active" to="ContactUs" smooth={true} offset={-70} duration={500} className="list">
             Contáctanos
           </Link>
         </nav>
