@@ -11,7 +11,7 @@ export default function App() {
         <Route exact path="/" element={<Initial />} />
         <Route exact path='/clients/:name' element={<ClientsPages />} />
         <Route exact path='/presupuesto' element={<Budget />} />
-        <Route exact path='/servicios/:name' element={<ServicesPage />} />
+        <Route exact path='/servicios/name' element={<ServicesPage />} />
       </Routes>
     </BrowserRouter>
   );
