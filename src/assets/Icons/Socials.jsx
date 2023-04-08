@@ -4,8 +4,8 @@ import '../../styles/Icons.sass'
 const Socials = () => {
   return (
     <div className="socials">
-      <div className='linkedin'></div>
-      <div className='instagram'></div>
+      <a href="https://www.linkedin.com/company/globalinc/" className='linkedin'></a>
+      <a href="https://instagram.com/globalincok?igshid=OTJhZDVkZWE=" className='instagram'></a>
     </div>
   )
 }
