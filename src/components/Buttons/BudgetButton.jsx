@@ -5,7 +5,7 @@ import {Link} from "react-router-dom"
 const BudgetButton = () => {
   return (
     <div className='budget-button-container'>
-      <Link to='/presupuesto'><button className='budget-button'>Pedir presupuesto</button></Link>
+      <button className='budget-button'><Link to='/presupuesto' className='link'>Pedir presupuesto</Link></button>
     </div>
   )
 }
