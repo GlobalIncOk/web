@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './Normalize.sass'
-import { Budget, ClientsPages, Contact, Initial } from './pages'
+import { Budget, ClientsPages, Initial, ServicesPage } from './pages'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export default function App() {
@@ -11,6 +11,7 @@ export default function App() {
         <Route exact path="/" element={<Initial />} />
         <Route exact path='/clients/:name' element={<ClientsPages />} />
         <Route exact path='/presupuesto' element={<Budget />} />
+        <Route exact path='/servicios/:id' element={<ServicesPage />} />
       </Routes>
     </BrowserRouter>
   );
