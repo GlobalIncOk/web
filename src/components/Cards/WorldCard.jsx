@@ -69,17 +69,10 @@ export default function WorldCard() {
           }}
           onRegionTipShow={function (event, label, code, ...props) {
             label.html(
-              '<div style="background-color: white; border: 1px solid white; outline: 10px solid white; border-radius: 5px; min-height: 70px; width: 150px; color: black"; padding-left: 10px>' +
+              '<div style="background-color: white; border: 1px solid white; outline: 10px solid white; border-radius: 5px; min-height: 20px; width: 150px; color: black"; padding-left: 10px>' +
                 "<b>" +
                 label.html() +
-                "</b>" +
-                "<p>" +
-                "Clients: " +
-                "<b>" +
-                clientsData[code] +
-                "</b>" +
-                "</p>" +
-                "</div>"
+              "</div>"
             );
           }}
         />

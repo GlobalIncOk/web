@@ -26,14 +26,14 @@ const StaffCard = () => {
       <img src={mariano} alt="imagen1" className='staff-image' />
         <h1>Mariano De Luca</h1>
         <h1>Filmmaker</h1>
-        <p>“Lorem ipsum”</p>
+        <p>“Lo único que captura un momento mejor que el ojo, es un lente”</p>
       </div>
 
       <div className='staff-card-container'>
       <img src={nicolas} alt="imagen1" className='staff-image' />
         <h1>Nicolas Severino</h1>
         <h1>Diseñador gráfico</h1>
-        <p>“Lorem ipsum”</p>
+        <p>“El diseño es simple, por eso es tan complicado”</p>
       </div>
     </div>
   )
