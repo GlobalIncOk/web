@@ -5,7 +5,7 @@ import {Link} from "react-router-dom"
 const ServiceCard = ({ service }) => {
   return (
     <div className='service-card-container'>
-      <Link to={`/servicios/${service.name}`} className="service-card">
+      <Link to={`/servicios/${service.id}`} className="service-card">
         <img src={service.src} alt={`Image ${service.name}`} className='service-image' />
         <h1>{service.name}</h1>
         <p>{service.description}</p>
