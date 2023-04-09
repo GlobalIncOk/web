@@ -1,10 +1,9 @@
 import React from 'react'
 import '../../styles/StaffCard.sass'
-import marcelo from '../../assets/Images/Staff/MarceloRomero.jpg'
-import camila from '../../assets/Images/Staff/CamilaMarchegiani.jpg'
-import mariano from '../../assets/Images/Staff/MarianoDeLuca.jpg'
-import nicolas from '../../assets/Images/Staff/NicolasSeverino.jpg'
-
+import marcelo from '../../assets/Images/Staff/MarceloRomero.avif'
+import camila from '../../assets/Images/Staff/CamilaMarchegiani.avif'
+import mariano from '../../assets/Images/Staff/MarianoDeLuca.avif'
+import nicolas from '../../assets/Images/Staff/NicolasSeverino.avif'
 
 const StaffCard = () => {
   return (
@@ -27,14 +26,14 @@ const StaffCard = () => {
       <img src={mariano} alt="imagen1" className='staff-image' />
         <h1>Mariano De Luca</h1>
         <h1>Filmmaker</h1>
-        <p>“Lorem ipsum”</p>
+        <p>“Lo único que captura un momento mejor que el ojo, es un lente”</p>
       </div>
 
       <div className='staff-card-container'>
       <img src={nicolas} alt="imagen1" className='staff-image' />
         <h1>Nicolas Severino</h1>
         <h1>Diseñador gráfico</h1>
-        <p>“Lorem ipsum”</p>
+        <p>“El diseño es simple, por eso es tan complicado”</p>
       </div>
     </div>
   )

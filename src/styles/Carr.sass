@@ -1,7 +1,21 @@
 @import '../Variables'
+.react-multi-carousel-item
+  width: 100% !important
+
+.react-multiple-carousel__arrow
+  display: none
+
+.react-multi-carousel-track
+    margin-left: 32px
+    gap: 16px
 
 .react-multi-carousel-list
   height: 400px
+
 @media (min-width: $break-large)
   .react-multi-carousel-list
     display: none
+
+  .react-multi-carousel-track
+      margin-left: 72px
+      gap: 24px

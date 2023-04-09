@@ -1,29 +1,21 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { HeroTop, HeroBottom, ClientDetail, Carr } from '../../components/index'
-import ClientsPages from '../ClientsPages/ClientsPages'
-import { Layout, Header, Services, Clients, Us, Footer, Staff, World } from '../../containers/index'
+import { Header, Services, Clients, Us, Footer, Staff, World } from '../../containers/index'
 
 const Initial = () => {
   return (
-    <BrowserRouter>
-      <Layout>
-        <Header />
-        <HeroTop />
-        <Services />
-        <Carr />
-        <Clients/>
-        <Routes>
-          <Route path='/' element="HeroTop" />
-          <Route path='/clients/:name' element={<ClientsPages />} />
-        </Routes>
-        <Us />
-        <World />
-        <Staff />
-        <HeroBottom />
-        <Footer />
-      </Layout>
-    </BrowserRouter>
+    <>
+      <Header />
+      <HeroTop />
+      <Services />
+      <Carr />
+      <Clients/>
+      <Us />
+      <World />
+      <Staff />
+      <HeroBottom />
+      <Footer />
+    </>
   )
 }
 
