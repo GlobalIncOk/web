@@ -46,10 +46,13 @@ const FormImages = () => {
     const selectedImageNames = images
       .filter((image, index) => selectedImages.includes(index))
       .map((image) => image.name);
-    console.log("Selected images:", selectedImageNames);
-    console.log("Bar value:", formValues.bar);
-    console.log("Checkboxes selected:", formValues.check);
-    console.log("Inputs values:", formValues.inputs);
+    const formData = {
+      selectedImages: selectedImageNames,
+      barValue: formValues.bar,
+      checkboxes: formValues.check,
+      inputs: formValues.inputs
+    }
+    console.log(JSON.stringify(formData));
   };
 
   const messages = {
@@ -86,7 +89,6 @@ const FormImages = () => {
           {messages[imageIndex]}
         </div>
       ))}
-      <button type="submit">Enviar</button>
     </form>
   );
 }

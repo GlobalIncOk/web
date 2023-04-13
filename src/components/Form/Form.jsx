@@ -38,12 +38,7 @@ function Form() {
     data.nombre = data.nombre.trim() + ' ' + data.apellido.trim()
     data.pais = selectedCountry.label
     data.empresa = data.empresa
-    data.imagenes = []
-    if (selectedImage1) data.imagenes.push('Marketing Digital')
-    if (selectedImage2) data.imagenes.push('Diseño Web')
-    if (selectedImage3) data.imagenes.push('Community Management')
-    if (selectedImage4) data.imagenes.push('Diseño Gráfico')
-    if (selectedImage5) data.imagenes.push('Email Marketing')
+    // data.imagenes = 
     console.log(data)
 
     const serviceID = 'service_nx84y5p'
@@ -56,7 +51,7 @@ function Form() {
       from_phone: data.telefono,
       from_country: selectedCountry.label,
       from_company: data.empresa,
-      from_images: data.imagenes.join(', '),
+      // from_images: data.imagenes.join(', '),
     };
 
     emailjs.send(serviceID, templateID, templateParams, publicKey)
@@ -70,7 +65,7 @@ function Form() {
   return (
     <>
       <FormImages />
-      {/* <form className="formulario" onSubmit={handleSubmit(onSubmit)}>
+      <form className="formulario" onSubmit={handleSubmit(onSubmit)}>
 
       <label>Nombre:</label>
       <input {...register('nombre', { required: true })} placeholder="Value" />
@@ -98,7 +93,7 @@ function Form() {
       {selectedCountry === null && <span>Este campo es requerido</span>}
 
       <input type="submit" value="Enviar" />
-    </form> */}
+    </form>
     </>
   );
 }

@@ -5,7 +5,8 @@ const FormBar = () => {
   const [fill, setFill] = useState(0);
 
   useEffect(() => {
-    console.log(`Fill value: ${fill}`);
+    setFill(fill);
+    console.log('Budget value',fill);
   }, [fill]);
 
   const handleFillChange = (event) => {

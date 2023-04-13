@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const CheckboxGroup = () => {
   const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
+  const [checkboxInfo, setCheckboxInfo] = useState(null);
 
   const handleCheckboxChange = (event) => {
     const checkboxValue = event.target.value;
@@ -13,9 +14,8 @@ const CheckboxGroup = () => {
     }
   };
 
-  // This function will be called whenever selectedCheckboxes is updated
-  // and will log the current state of selectedCheckboxes to the console
-  React.useEffect(() => {
+  useEffect(() => {
+    setCheckboxInfo(selectedCheckboxes);
     console.log('Checkboxes seleccionados:', selectedCheckboxes);
   }, [selectedCheckboxes]);
 

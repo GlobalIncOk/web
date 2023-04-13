@@ -3,9 +3,10 @@ import React, { useState, useEffect } from "react";
 const FormInputs = ({ onSubmit }) => {
   const [social, setSocial] = useState("");
   const [web, setWeb] = useState("");
+  const [formInfo, setFormInfo] = useState(null);
 
   useEffect(() => {
-    console.log({ social, web });
+    setFormInfo({ social, web });
   }, [social, web]);
 
   const handleInputChange = (event) => {
@@ -17,6 +18,8 @@ const FormInputs = ({ onSubmit }) => {
     }
     onSubmit({ social, web });
   };
+
+  console.log('Inputs info', formInfo); // log the formInfo variable
 
   return (
     <form>
