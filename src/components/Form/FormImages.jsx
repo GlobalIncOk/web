@@ -7,8 +7,8 @@ const FormImages = () => {
   const [formValues, setFormValues] = useState({
     bar: 0,
     check: [],
-    inputs: { social: '', web: '' }
   });
+  const [formInfo, setFormInfo] = useState({ social: "", web: "" });
 
   useEffect(() => {
     // Log selected images in real-time
@@ -25,22 +25,24 @@ const FormImages = () => {
       setSelectedImages([...selectedImages, index]);
     } else {
       // Eliminar imagen seleccionada
-      const newSelectedImages = selectedImages.filter((image) => image !== index);
+      const newSelectedImages = selectedImages.filter(
+        (image) => image !== index
+      );
       setSelectedImages(newSelectedImages);
     }
-  }
+  };
 
   const handleBarSubmit = (value) => {
-    setFormValues({...formValues, bar: value});
-  }
+    setFormValues({ ...formValues, bar: value });
+  };
 
   const handleCheckSubmit = (value) => {
-    setFormValues({...formValues, check: value});
-  }
+    setFormValues({ ...formValues, check: value });
+  };
 
   const handleInputsSubmit = (value) => {
-    setFormValues({...formValues, inputs: value});
-  }
+    setFormInfo(value);
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -51,8 +53,8 @@ const FormImages = () => {
       selectedImages: selectedImageNames,
       barValue: formValues.bar,
       checkboxes: formValues.check,
-      inputs: formValues.inputs
-    }
+      inputs: formInfo,
+    };
     console.log(JSON.stringify(formData));
   };
 
