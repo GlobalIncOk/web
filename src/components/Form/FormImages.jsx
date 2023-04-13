@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FormBar, FormCheck, FormInputs } from "..";
 
 const FormImages = () => {
@@ -8,6 +8,14 @@ const FormImages = () => {
     check: [],
     inputs: { social: '', web: '' }
   });
+
+  useEffect(() => {
+    // Log selected images in real-time
+    const selectedImageNames = images
+      .filter((image, index) => selectedImages.includes(index))
+      .map((image) => image.name);
+    console.log("Imágenes seleccionadas:", selectedImageNames);
+  }, [selectedImages]);
 
   const handleImageClick = (index) => {
     const imageIndex = selectedImages.indexOf(index);
@@ -38,11 +46,11 @@ const FormImages = () => {
     const selectedImageNames = images
       .filter((image, index) => selectedImages.includes(index))
       .map((image) => image.name);
-    console.log("Imágenes seleccionadas:", selectedImageNames);
+    console.log("Selected images:", selectedImageNames);
     console.log("Bar value:", formValues.bar);
-    console.log("Checkboxes seleccionados:", formValues.check);
+    console.log("Checkboxes selected:", formValues.check);
     console.log("Inputs values:", formValues.inputs);
-  }
+  };
 
   const messages = {
     0: <FormBar onSubmit={handleBarSubmit} />,

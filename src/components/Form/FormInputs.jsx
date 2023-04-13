@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const FormInputs = ({ onSubmit }) => {
   const [social, setSocial] = useState("");
   const [web, setWeb] = useState("");
+
+  useEffect(() => {
+    console.log({ social, web });
+  }, [social, web]);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -11,9 +15,7 @@ const FormInputs = ({ onSubmit }) => {
     } else if (name === "web") {
       setWeb(value);
     }
-    
     onSubmit({ social, web });
-    console.log({ social, web });
   };
 
   return (
