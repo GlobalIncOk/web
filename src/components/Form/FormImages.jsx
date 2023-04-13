@@ -75,12 +75,12 @@ const FormImages = () => {
     <h2 className="form-title">¿En qué servicio estas interesado?</h2>
     <form onSubmit={handleSubmit}>
       <div className='form-list'>
-        {images.map((image, index) => (
-          <div className='form-images' key={index} onClick={() => handleImageClick(index)} >
-            <img src={image.url} alt={image.name} style={{ height: '42px' }} />
-            <h2>{image.name}</h2>
-          </div>
-        ))}
+      {images.map((image, index) => (
+        <div className={`form-images ${selectedImages.includes(index) ? "selected-image" : ""}`} key={index} onClick={() => handleImageClick(index)}>
+          <img src={image.url} alt={image.name} style={{ height: '42px' }} className={selectedImages.includes(index) ? "selected" : ""} />
+          <h2>{image.name}</h2>
+        </div>
+      ))}
       </div>
       {selectedImages.length > 0 && selectedImages.map((imageIndex) => (
         <div key={imageIndex}>
