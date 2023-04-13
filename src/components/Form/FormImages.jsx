@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FormBar, FormCheck, FormInputs } from "..";
+import '../../styles/FormImages.sass'
 
 const FormImages = () => {
   const [selectedImages, setSelectedImages] = useState([]);
@@ -62,26 +63,23 @@ const FormImages = () => {
   };
 
   const images = [
-    { url: require('../../assets/Icons/Services/Icono_DigitalMarketing.png'), name: 'Imagen 1' },
-    { url: require('../../assets/Icons/Services/Icono_DisenoWeb.png'), name: 'Imagen 2' },
-    { url: require('../../assets/Icons/Services/Icono_CommunityMan.png'), name: 'Imagen 3' },
-    { url: require('../../assets/Icons/Services/Icono_DisenoGrafico.png'), name: 'Imagen 4' },
-    { url: require('../../assets/Icons/Services/Icono_EmailMark.png'), name: 'Imagen 5' }
+    { url: require('../../assets/Icons/Services/Icono_DigitalMarketing.png'), name: 'Marketing Digital' },
+    { url: require('../../assets/Icons/Services/Icono_DisenoWeb.png'), name: 'Diseño Web' },
+    { url: require('../../assets/Icons/Services/Icono_CommunityMan.png'), name: 'Community Management' },
+    { url: require('../../assets/Icons/Services/Icono_DisenoGrafico.png'), name: 'Diseño Gráfico' },
+    { url: require('../../assets/Icons/Services/Icono_EmailMark.png'), name: 'Email Marketing' }
   ];
 
   return (
+    <div className="form-images-container">
+    <h2 className="form-title">¿En qué servicio estas interesado?</h2>
     <form onSubmit={handleSubmit}>
-      <div>
+      <div className='form-list'>
         {images.map((image, index) => (
-          <img
-            key={index}
-            src={image.url}
-            alt={image.name}
-            onClick={() => handleImageClick(index)}
-            style={{
-              border: selectedImages.includes(index) ? '2px solid blue' : 'none'
-            }}
-          />
+          <div className='form-images' key={index} onClick={() => handleImageClick(index)} >
+            <img src={image.url} alt={image.name} style={{ height: '42px' }} />
+            <h2>{image.name}</h2>
+          </div>
         ))}
       </div>
       {selectedImages.length > 0 && selectedImages.map((imageIndex) => (
@@ -90,6 +88,7 @@ const FormImages = () => {
         </div>
       ))}
     </form>
+    </div>
   );
 }
 

@@ -20,8 +20,8 @@ const CheckboxGroup = () => {
   }, [selectedCheckboxes]);
 
   return (
-    <div>
-      <h2>Qué web necesitas?</h2>
+    <div className='form-check-container'>
+      <p className='form-label'>¿Qué web necesitas?</p>
       <div>
         <label>
           <input

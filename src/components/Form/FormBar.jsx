@@ -16,7 +16,7 @@ const FormBar = () => {
 
   return (
     <div className='bar-container'>
-      <h2>Presupuesto</h2>
+      <p className='form-label'>Presupuesto:</p>
       <input type="range" min="0" max="6000" value={fill} onChange={handleFillChange} className='bar' />
       <span>{`u$d ${fill}`}</span>
     </div>
