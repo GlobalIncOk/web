@@ -1,10 +1,14 @@
-import '../../styles/Form.sass'
-import React, { useState, useMemo } from 'react'
-import { useForm } from 'react-hook-form'
-import Select from 'react-select'
+import React, { useState, useMemo, useEffect } from 'react';
 import countryList from 'react-select-country-list'
-import emailjs from '@emailjs/browser'
-import FormImages from './FormImages'
+import Select from 'react-select'
+
+const images = [
+  { url: require('../../assets/Icons/Services/Icono_DigitalMarketing.png'), name: 'Marketing Digital' },
+  { url: require('../../assets/Icons/Services/Icono_DisenoWeb.png'), name: 'Diseño Web' },
+  { url: require('../../assets/Icons/Services/Icono_CommunityMan.png'), name: 'Community Management' },
+  { url: require('../../assets/Icons/Services/Icono_DisenoGrafico.png'), name: 'Diseño Gráfico' },
+  { url: require('../../assets/Icons/Services/Icono_EmailMark.png'), name: 'Email Marketing' }
+];
 
 function CountrySelector({ setSelectedCountry }) {
   const [value, setValue] = useState('')
@@ -25,77 +29,187 @@ function CountrySelector({ setSelectedCountry }) {
   )
 }
 
-function Form() {
+const Form = () => {
+  const [selectedImageIndexes, setSelectedImageIndexes] = useState([]);
+  const [social, setSocial] = useState('');
+  const [web, setWeb] = useState('');
+  const [fill, setFill] = useState(0);
+  const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState(null)
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Submit form logic here
+  };
 
-  const onSubmit = data => {
-    data.nombre = data.nombre.trim() + ' ' + data.apellido.trim()
-    data.pais = selectedCountry.label
-    data.empresa = data.empresa
-    // data.imagenes = 
-    console.log(data)
+  const handleImageClick = (index) => {
+    const selectedIndex = selectedImageIndexes.indexOf(index);
+    let newSelectedImageIndexes = [];
 
-    const serviceID = 'service_nx84y5p'
-    const templateID = 'template_szphrkt'
-    const publicKey = '2na7nu4KCNkVkXE0T'
+    if (selectedIndex === -1) {
+      newSelectedImageIndexes = [...selectedImageIndexes, index];
+    } else {
+      newSelectedImageIndexes = [
+        ...selectedImageIndexes.slice(0, selectedIndex),
+        ...selectedImageIndexes.slice(selectedIndex + 1)
+      ];
+    }
 
-    const templateParams = {
-      from_name: data.nombre,
-      from_email: data.correoElectronico,
-      from_phone: data.telefono,
-      from_country: selectedCountry.label,
-      from_company: data.empresa,
-      // from_images: data.imagenes.join(', '),
-    };
+    setSelectedImageIndexes(newSelectedImageIndexes);
+  };
 
-    emailjs.send(serviceID, templateID, templateParams, publicKey)
-      .then((result) => {
-        console.log('Email sent successfully:', result.text);
-      }, (error) => {
-        console.error('Email sending failed:', error);
-    })
-  }
+  useEffect(() => {
+    console.log("Selected Image Indexes:", selectedImageIndexes);
+  }, [selectedImageIndexes]);
+
+  const handleFillChange = (e) => {
+    setFill(e.target.value);
+  };
+
+  useEffect(() => {
+    setFill(fill);
+    console.log('Budget value',fill);
+  }, [fill]);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+
+    if (name === 'social') {
+      setSocial(value);
+    } else if (name === 'web') {
+      setWeb(value);
+    }
+  };
+
+  const handleCheckboxChange = (e) => {
+    const { name, checked } = e.target;
+
+    if (checked) {
+      setSelectedCheckboxes([...selectedCheckboxes, name]);
+    } else {
+      setSelectedCheckboxes(selectedCheckboxes.filter((checkbox) => checkbox !== name));
+    }
+  };
 
   return (
     <>
-      <FormImages />
-      <form className="formulario" onSubmit={handleSubmit(onSubmit)}>
+      <div>
+        {images.map((image, index) => (
+          <img
+            key={index}
+            src={image.url}
+            alt={image.name}
+            style={{ border: selectedImageIndexes.includes(index) ? '2px solid blue' : 'none' }}
+            onClick={() => handleImageClick(index)}
+          />
+        ))}
+      </div>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="name">Nombre*</label>
+        <input type="text" id="name" name="name" placeholder="Nombre" required />
 
-      <label>Nombre:</label>
-      <input {...register('nombre', { required: true })} placeholder="Value" />
+        <label htmlFor="lastName">Apellido*</label>
+        <input type="text" id="lastName" name="lastName" placeholder="Apellido" required />
 
-      <label>Apellido:</label>
-      <input {...register('apellido', { required: true })} placeholder="Value" />
+        <label htmlFor="email">Correo Electrónico*</label>
+        <input type="email" id="email" name="email" placeholder="Correo Electrónico" required />
 
-      <label>Correo electrónico:</label>
-      <input {...register('correoElectronico', { required: true })} placeholder="Value" />
+        <label htmlFor="phone">Teléfono*</label>
+        <input type="tel" id="phone" name="phone" placeholder="Teléfono" required />
 
-      <label>Teléfono:</label>
-      <input {...register('telefono', { required: true })} placeholder="Value" />
+        <label htmlFor="company">Empresa*</label>
+        <input type="text" id="company" name="company" placeholder="Empresa" required />
 
-      <label>Empresa:</label>
-      <input {...register('empresa', { required: true })} placeholder="Value" />
+        <label htmlFor="country">País*</label>
+        <CountrySelector setSelectedCountry={setSelectedCountry} id="country" name="country" placeholder="País" required />
 
-      <label>País:</label>
-      <CountrySelector setSelectedCountry={setSelectedCountry} />
+        {selectedImageIndexes.includes(0) && (
+          <div className="bar-container">
+            <p className="form-label">Presupuesto:</p>
+            <input
+              type="range"
+              min="0"
+              max="6000"
+              value={fill}
+              onChange={handleFillChange}
+              className="bar"
+            />
+            <span>{`u$d ${fill}`}</span>
+          </div>
+        )}
 
-      {errors.nombre && <span>Este campo es requerido</span>}
-      {errors.apellido && <span>Este campo es requerido</span>}
-      {errors.correoElectronico && <span>Este campo es requerido</span>}
-      {errors.telefono && <span>Este campo es requerido</span>}
-      {errors.empresa && <span>Este campo es requerido</span>}
-      {selectedCountry === null && <span>Este campo es requerido</span>}
+        {selectedImageIndexes.includes(1) && (
+          <form>
+            <div>
+              <label htmlFor="social">Redes Sociales</label>
+              <input
+                type="text"
+                name="social"
+                id="social"
+                placeholder="Value"
+                value={social}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div>
+              <label htmlFor="web">Web / URL</label>
+              <input
+                type="text"
+                name="web"
+                id="web"
+                placeholder="Value"
+                value={web}
+                onChange={handleInputChange}
+              />
+            </div>
+          </form>
+        )}
+        {selectedImageIndexes.includes(2) && (
+          <div className='form-check-container'>
+            <p className='form-label'>¿Qué web necesitas?</p>
+            <div>
+              <label>
+                <input
+                  type="checkbox"
+                  name="Institucional"
+                  value="Institucional"
+                  checked={selectedCheckboxes.includes('Institucional')}
+                  onChange={handleCheckboxChange}
+                />
+                Institucional
+              </label>
+            </div>
+            <div>
+              <label>
+                <input
+                  type="checkbox"
+                  name="E-commerce"
+                  value="E-commerce"
+                  checked={selectedCheckboxes.includes('E-commerce')}
+                  onChange={handleCheckboxChange}
+                />
+                E-commerce
+              </label>
+            </div>
+            <div>
+              <label>
+                <input
+                  type="checkbox"
+                  name="Landing Page"
+                  value="Landing Page"
+                  checked={selectedCheckboxes.includes('Landing Page')}
+                  onChange={handleCheckboxChange}
+                />
+                Landing Page
+              </label>
+            </div>
+          </div>
+        )}
 
-      <input type="submit" value="Enviar" />
-    </form>
+        <button type="submit">Enviar</button>
+      </form>
     </>
-  );
+  )
 }
 
 export default Form
