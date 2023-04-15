@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import countryList from 'react-select-country-list'
 import Select from 'react-select'
+import emailjs from '@emailjs/browser'
 
 const images = [
   { url: require('../../assets/Icons/Services/Icono_DigitalMarketing.png'), name: 'Marketing Digital' },
@@ -37,11 +38,20 @@ const Form = () => {
   const [formInfo, setFormInfo] = useState(null);
   const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState(null)
+  const [name, setName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [company, setCompany] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Submit form logic here
-  };
+  useEffect(() => {
+    console.log("Nombre:", name);
+    console.log("Apellido:", lastName);
+    console.log("Correo Electrónico:", email);
+    console.log("Teléfono:", phone);
+    console.log("Empresa:", company);
+    console.log("País:", selectedCountry);
+  }, [name, lastName, email, phone, company, selectedCountry]);
 
   const handleImageClick = (index) => {
     const selectedIndex = selectedImageIndexes.indexOf(index);
@@ -115,21 +125,21 @@ const Form = () => {
           />
         ))}
       </div>
-      <form onSubmit={handleSubmit}>
+      <form>
         <label htmlFor="name">Nombre*</label>
-        <input type="text" id="name" name="name" placeholder="Nombre" required />
+        <input type="text" id="name" name="name" placeholder="Nombre" value={name} onChange={(event) => setName(event.target.value)} required />
 
         <label htmlFor="lastName">Apellido*</label>
-        <input type="text" id="lastName" name="lastName" placeholder="Apellido" required />
+        <input type="text" id="lastName" name="lastName" placeholder="Apellido" value={lastName} onChange={(event) => setLastName(event.target.value)} required />
 
         <label htmlFor="email">Correo Electrónico*</label>
-        <input type="email" id="email" name="email" placeholder="Correo Electrónico" required />
+        <input type="email" id="email" name="email" placeholder="Correo Electrónico" value={email} onChange={(event) => setEmail(event.target.value)} required />
 
         <label htmlFor="phone">Teléfono*</label>
-        <input type="tel" id="phone" name="phone" placeholder="Teléfono" required />
+        <input type="tel" id="phone" name="phone" placeholder="Teléfono" value={phone} onChange={(event) => setPhone(event.target.value)} required />
 
         <label htmlFor="company">Empresa*</label>
-        <input type="text" id="company" name="company" placeholder="Empresa" required />
+        <input type="text" id="company" name="company" placeholder="Empresa" value={company} onChange={(event) => setCompany(event.target.value)} required />
 
         <label htmlFor="country">País*</label>
         <CountrySelector setSelectedCountry={setSelectedCountry} id="country" name="country" placeholder="País" required />
