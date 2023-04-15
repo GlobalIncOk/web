@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import countryList from 'react-select-country-list'
 import Select from 'react-select'
+import Swal from 'sweetalert2'
 import emailjs from '@emailjs/browser'
 
 const images = [
@@ -44,6 +45,65 @@ const Form = () => {
   const [web, setWeb] = useState('');
   const [formInfo, setFormInfo] = useState(null);
   const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const templateParams = {
+      to_email: "destinatario@example.com",
+      from_name: name,
+      from_lastname: lastName,
+      from_email: email,
+      from_phone: phone,
+      from_company: company,
+      from_country: selectedCountry.label,
+      from_services: selectedImages,
+      from_budget: fill,
+      form_socials: social + ' ' + web,
+      from_checks: selectedCheckboxes
+    };
+
+    const serviceID = 'service_nx84y5p'
+    const templateID = 'template_szphrkt'
+    const publicKey = '2na7nu4KCNkVkXE0T'
+
+    Swal.fire({
+      title: '¿Enviar formulario?',
+      text: 'Está a punto de enviar el formulario. ¿Está seguro?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sí, enviar!',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        emailjs.send(serviceID, templateID, templateParams, publicKey)
+        .then(function(response) {
+          console.log("Formulario enviado con éxito", response);
+        }, function(error) {
+          console.log("Error al enviar formulario", error);
+        })
+          .then(() => {
+            Swal.fire('¡Gracias por su contacto!', '', 'success');
+            setName('');
+            setLastName('');
+            setEmail('');
+            setPhone('');
+            setCompany('');
+            setSelectedCountry(null);
+            setSelectedImageIndexes([]);
+            setFill(0);
+            setSocial('');
+            setWeb('');
+            setSelectedCheckboxes([]);
+          })
+          .catch((error) => {
+            Swal.fire('¡Oops!', `Algo salió mal al enviar el formulario: ${error.message}`, 'error');
+          });
+      }
+    });
+  }
 
   useEffect(() => {
     console.log("Nombre:", name);
@@ -103,18 +163,18 @@ const Form = () => {
 
   return (
     <>
-      <div>
-        {images.map((image, index) => (
-          <img
-            key={index}
-            src={image.url}
-            alt={image.name}
-            style={{ border: selectedImageIndexes.includes(index) ? '2px solid blue' : 'none' }}
-            onClick={() => handleImageClick(index)}
-          />
-        ))}
-      </div>
-      <form>
+      <form onSubmit={handleSubmit}>
+        <div>
+          {images.map((image, index) => (
+            <img
+              key={index}
+              src={image.url}
+              alt={image.name}
+              style={{ border: selectedImageIndexes.includes(index) ? '2px solid blue' : 'none' }}
+              onClick={() => handleImageClick(index)}
+            />
+          ))}
+        </div>
         <label htmlFor="name">Nombre*</label>
         <input type="text" id="name" name="name" placeholder="Nombre" value={name} onChange={(event) => setName(event.target.value)} required />
 
@@ -131,7 +191,7 @@ const Form = () => {
         <input type="text" id="company" name="company" placeholder="Empresa" value={company} onChange={(event) => setCompany(event.target.value)} required />
 
         <label htmlFor="country">País*</label>
-        <CountrySelector setSelectedCountry={setSelectedCountry} id="country" name="country" placeholder="País" required />
+        <CountrySelector setSelectedCountry={setSelectedCountry} id="country" name="country" placeholder="País" required /> 
 
         {selectedImageIndexes.includes(0) && (
           <div className="bar-container">
