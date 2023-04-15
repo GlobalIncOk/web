@@ -34,6 +34,7 @@ const Form = () => {
   const [social, setSocial] = useState('');
   const [web, setWeb] = useState('');
   const [fill, setFill] = useState(0);
+  const [formInfo, setFormInfo] = useState(null);
   const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState(null)
 
@@ -59,8 +60,9 @@ const Form = () => {
   };
 
   useEffect(() => {
-    console.log("Selected Image Indexes:", selectedImageIndexes);
-  }, [selectedImageIndexes]);
+    const selectedImages = selectedImageIndexes.map((index) => images[index].name);
+    console.log("Selected Images:", selectedImages);
+  }, [selectedImageIndexes, images]);
 
   const handleFillChange = (e) => {
     setFill(e.target.value);
@@ -73,13 +75,18 @@ const Form = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-
     if (name === 'social') {
       setSocial(value);
     } else if (name === 'web') {
       setWeb(value);
     }
   };
+
+  useEffect(() => {
+    const newFormInfo = { social, web };
+    setFormInfo(newFormInfo);
+    console.log('Inputs info', newFormInfo); // log the newFormInfo variable
+  }, [social, web]);
 
   const handleCheckboxChange = (e) => {
     const { name, checked } = e.target;
@@ -90,6 +97,10 @@ const Form = () => {
       setSelectedCheckboxes(selectedCheckboxes.filter((checkbox) => checkbox !== name));
     }
   };
+
+  useEffect(() => {
+    console.log('Selected checkboxes:', selectedCheckboxes);
+  }, [selectedCheckboxes]);
 
   return (
     <>
