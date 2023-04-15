@@ -1,0 +1,46 @@
+@import '../Variables'
+
+.form-header
+  position: relative
+  height: 15vh
+  display: block
+  .form-header-background
+    position: absolute
+    width: 100%
+    height: 100px
+    background: linear-gradient(0deg, #2680e8 0%, #151515 100%)
+    transform-origin: 0px 0px
+    transform: skewY(-10deg)
+    overflow: hidden
+    z-index: -1
+    .form-header-content
+      padding: 4rem 2rem
+      transform: skewY(10deg)
+      .form-header-title
+        color: white
+        font-size: 14px
+        font-weight: 400
+        line-height: 17.5px
+
+@media (min-width: $break-medium)
+  .form-header
+    height: 35vh
+    .form-header-background
+      height: 250px
+      .form-header-content
+        padding: 10rem 2rem
+        .form-header-title
+          font-size: 20px
+          line-height: 25px
+
+@media (min-width: $break-large)
+  .form-header
+    height: 30vh
+    .form-header-background
+      height: 300px
+      .form-header-content
+        padding: 12rem 4rem
+        .form-header-title
+          font-size: 32px
+          font-weight: 500
+          line-height: 40px

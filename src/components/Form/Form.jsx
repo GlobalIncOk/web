@@ -3,6 +3,7 @@ import countryList from 'react-select-country-list'
 import Select from 'react-select'
 import Swal from 'sweetalert2'
 import emailjs from '@emailjs/browser'
+import '../../styles/Form.sass'
 
 const images = [
   { url: require('../../assets/Icons/Services/Icono_DigitalMarketing.png'), name: 'Marketing Digital' },
@@ -50,7 +51,6 @@ const Form = () => {
     event.preventDefault();
 
     const templateParams = {
-      to_email: "destinatario@example.com",
       from_name: name,
       from_lastname: lastName,
       from_email: email,
@@ -165,87 +165,95 @@ const Form = () => {
   };
 
   return (
-    <>
-      <form onSubmit={handleSubmit}>
-        <div>
-          {images.map((image, index) => (
-            <img
-              key={index}
-              src={image.url}
-              alt={image.name}
-              style={{ border: selectedImageIndexes.includes(index) ? '2px solid blue' : 'none' }}
-              onClick={() => handleImageClick(index)}
-            />
-          ))}
-        </div>
-        <label htmlFor="name">Nombre</label>
-        <input type="text" id="name" name="name" placeholder="Nombre" value={name} onChange={(event) => setName(event.target.value)} required />
-
-        <label htmlFor="lastName">Apellido</label>
-        <input type="text" id="lastName" name="lastName" placeholder="Apellido" value={lastName} onChange={(event) => setLastName(event.target.value)} required />
-
-        <label htmlFor="email">Correo Electrónico</label>
-        <input type="email" id="email" name="email" placeholder="Correo Electrónico" value={email} onChange={(event) => setEmail(event.target.value)} required />
-
-        <label htmlFor="phone">Teléfono</label>
-        <input type="tel" id="phone" name="phone" placeholder="Teléfono" value={phone} onChange={(event) => setPhone(event.target.value)} required />
-
-        <label htmlFor="company">Empresa</label>
-        <input type="text" id="company" name="company" placeholder="Empresa" value={company} onChange={(event) => setCompany(event.target.value)} required />
-
-        <label htmlFor="country">País</label>
-        <CountrySelector setSelectedCountry={setSelectedCountry} id="country" name="country" placeholder="País" required />
-
-        <label htmlFor="consultation">Su consulta:</label>
-        <input type="text" id="consultation" name="consultation" placeholder="consultation" value={consultation} onChange={(event) => setConsultation(event.target.value)} required />
-
-        {selectedImageIndexes.includes(0) && (
-          <div className="bar-container">
-            <p className="form-label">Presupuesto:</p>
-            <input
-              type="range"
-              min="0"
-              max="6000"
-              value={fill}
-              onChange={handleFillChange}
-              className="bar"
-            />
-            <span>{`u$d ${fill}`}</span>
+    <form onSubmit={handleSubmit} className='form-container'>
+      <h2 className='form-title'>¿En que servicio estás interesado?</h2>
+      <div className='form-images-list'>
+        {images.map((image, index) => (
+          <div key={index} className="form-image-container" style={{ border: selectedImageIndexes.includes(index) ? '2px solid blue' : 'none' }} onClick={() => handleImageClick(index)}>
+            <img src={image.url} alt={image.name} className='form-image' />
+            <h2 className="form-images-titles">{image.name}</h2>
           </div>
-        )}
+        ))}
+      </div>
+      <div className='form-inputs-list'>
+        <div className='column'>
+          <label className='label' htmlFor="name">Nombre</label>
+          <input className='input' type="text" id="name" name="name" placeholder="Value" value={name} onChange={(event) => setName(event.target.value)} required />
 
-        {selectedImageIndexes.includes(1) && (
-          <form>
-            <div>
-              <label htmlFor="social">Redes Sociales</label>
-              <input
-                type="text"
-                name="social"
-                id="social"
-                placeholder="Value"
-                value={social}
-                onChange={handleInputChange}
-              />
-            </div>
-            <div>
-              <label htmlFor="web">Web / URL</label>
-              <input
-                type="text"
-                name="web"
-                id="web"
-                placeholder="Value"
-                value={web}
-                onChange={handleInputChange}
-              />
-            </div>
-          </form>
-        )}
-        {selectedImageIndexes.includes(2) && (
+          <label className='label' htmlFor="lastName">Apellido</label>
+          <input className='input' type="text" id="lastName" name="lastName" placeholder="Value" value={lastName} onChange={(event) => setLastName(event.target.value)} required />
+
+          <label className='label' htmlFor="email">Correo Electrónico</label>
+          <input className='input' type="email" id="email" name="email" placeholder="Value" value={email} onChange={(event) => setEmail(event.target.value)} required />
+        </div>
+
+        <div className='column'>
+          <label className='label' htmlFor="phone">Teléfono</label>
+          <input className='input' type="tel" id="phone" name="phone" placeholder="Value" value={phone} onChange={(event) => setPhone(event.target.value)} required />
+
+          <label className='label' htmlFor="company">Empresa</label>
+          <input className='input' type="text" id="company" name="company" placeholder="Value" value={company} onChange={(event) => setCompany(event.target.value)} required />
+
+          <label className='label' htmlFor="country">País</label>
+          <CountrySelector className='input' setSelectedCountry={setSelectedCountry} id="country" name="country" placeholder="Value" required />
+        </div>
+        <div className='consulta-container'>
+          <label className='label' htmlFor="consultation">Su consulta:</label>
+          <textarea className='consulta' type="text" id="consultation" name="consultation" placeholder="Value" value={consultation} onChange={(event) => setConsultation(event.target.value)} required />
+        </div>
+      </div>
+
+      {selectedImageIndexes.includes(0) && (
+        <div className="bar-container">
+          <p className="label">Presupuesto:</p>
+          <input
+            type="range"
+            min="0"
+            max="6000"
+            value={fill}
+            onChange={handleFillChange}
+            className='input'
+          />
+          <span>{`u$d ${fill}`}</span>
+        </div>
+      )}
+
+      {selectedImageIndexes.includes(1) && (
+        <form className='form-inputs-list'>
+          <div className='column'>
+            <label className='label' htmlFor="social"><p className='form-label'>Redes Sociales</p></label>
+            <input
+              className='input'
+              type="text"
+              name="social"
+              id="social"
+              placeholder="Value"
+              value={social}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div className='column'>
+            <label className='label' htmlFor="web"><p className='form-label'>Web / URL</p></label>
+            <input
+              className='input'
+              type="text"
+              name="web"
+              id="web"
+              placeholder="Value"
+              value={web}
+              onChange={handleInputChange}
+            />
+          </div>
+        </form>
+      )}
+      {selectedImageIndexes.includes(2) && (
+        <>
+          <p className='form-label'>¿Qué web necesitas?</p>
           <div className='form-check-container'>
-            <p className='form-label'>¿Qué web necesitas?</p>
             <div>
-              <label>
+              <label className='label' >
                 <input
+                  className='input'
                   type="checkbox"
                   name="Institucional"
                   value="Institucional"
@@ -256,8 +264,9 @@ const Form = () => {
               </label>
             </div>
             <div>
-              <label>
+              <label className='label' >
                 <input
+                  className='input'
                   type="checkbox"
                   name="E-commerce"
                   value="E-commerce"
@@ -268,8 +277,9 @@ const Form = () => {
               </label>
             </div>
             <div>
-              <label>
+              <label className='label' >
                 <input
+                  className='input'
                   type="checkbox"
                   name="Landing Page"
                   value="Landing Page"
@@ -280,11 +290,11 @@ const Form = () => {
               </label>
             </div>
           </div>
-        )}
+        </>
+      )}
 
-        <button type="submit">Enviar</button>
-      </form>
-    </>
+      <button className='button-form' type="submit">Enviar</button>
+    </form>
   )
 }
 

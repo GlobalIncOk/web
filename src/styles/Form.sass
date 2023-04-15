@@ -1,60 +1,217 @@
-.formulario
+@import '../Variables'
+
+.form-container
   display: flex
   flex-direction: column
-  max-width: 500px
   margin: 0 32px
-  .title
+
+  .form-title
     font-size: 12px
     font-weight: 400
     line-height: 15px
-  .image-selectors
+    margin: 32px 0
+
+  .form-images-list
     display: flex
-    flex-direction: row
     flex-wrap: wrap
-    h2
-      font-size: 12px
-      font-weight: 400
-      line-height: 15px
-    .image-selector
+    gap: 14px
+    justify-content: center
+    .form-image-container
       display: flex
-      justify-content: center
+      flex-direction: column
       align-items: center
-      height: 125px
-      width: 200px
-      cursor: pointer
-    .image-selector.selected
-      border: 2px solid blue
+      justify-content: center
+      height: 126px
+      width: 197px
+      background: #FFFFFF
+      border-radius: 16px
+      box-shadow: 0px 4px 15px #CBD2E0
+      text-align: center
+      .form-image
+        height: 60px
+        width: 60px
+        margin-top: 20px
+      .form-images-titles
+        font-size: 12px
+        font-weight: 400
+        line-height: 15px
+        margin: 17px 51px
 
-label
-  margin-top: 1rem
+  .form-inputs-list
+    display: flex
+    flex-direction: column
+    .column
+      display: flex
+      flex-direction: column
+      .label
+        margin: 1rem 0 .5rem 0
+      .input
+        padding: 0.5rem
+        border: 1px solid #ccc
+        border-radius: 6px
+        width: -webkit-fill-available
+    .consulta-container
+      display: flex
+      flex-direction: column
+      width: -webkit-fill-available
+      .consulta
+        height: 100px
+        padding: 10px
+        border: 1px solid #ccc
+        border-radius: 6px
+        margin-bottom: 1rem
+      .label
+        margin: 1rem 0 .5rem 0
 
-input
-  padding: 0.5rem
-  margin: 0.5rem 0
-  border: 1px solid #ccc
-  border-radius: 6px
-  width: -webkit-fill-available
+  .bar-container
+    transition: width 1s ease-in-out
+    margin: 0
+    .label
+      margin: 1rem 0 .5rem 0
+    .input
+      width: -webkit-fill-available
 
-input[type='checkbox']
-  padding: 0.5rem
-  margin: 0.5rem 0.5rem
-  border: 1px solid #ccc
-  border-radius: 6px
-  width: auto
+  .form-check-container
+    margin-bottom: 20px
+    input[type='checkbox']
+      padding: 0.5rem
+      margin: 0.5rem 0.5rem
+      border: 1px solid #ccc
+      border-radius: 6px
+      width: auto
 
+  .button-form
+    margin-top: 60px
+    height: 35px
+    width: 5.75rem
+    color: #FFFFFF
+    font-size: 16px
+    font-weight: 600
+    border-radius: 8px
+    border: none
+    align-self: flex-end
+    background-color: rgb(37, 37,37, 0.75 )
+    &:hover
+      background-color: #000000
 
-input[type='submit']
-  background-color: #333
-  color: white
-  padding: 0.5rem
-  margin-top: 1rem
-  border: none
-  border-radius: 5px
-  cursor: pointer
+@media (min-width: $break-medium)
+  .form-container
+    margin: 0 72px
 
-span
-  color: red
-  margin-top: 0.25rem
+    .form-title
+      font-size: 16px
+      font-weight: 400
+      line-height: 20px
+      margin: 55px 0
 
-.form-check-container
-  margin: 20px 0
+    .form-images-list
+      gap: 24px
+      .form-image-container
+        height: 200px
+        width: 263px
+        .form-image
+          height: 100px
+          width: 100px
+          margin-top: 17px
+        .form-images-titles
+          font-family: $secondary-font-family
+          font-size: 20px
+          font-weight: 600
+          line-height: 25px
+          margin: 21px 43px
+
+    .form-inputs-list
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      justify-content: space-between
+      .column
+        width: 48%
+        .label
+          margin: 1rem 0 .5rem 0
+        .input
+          padding: 0.5rem
+          border: 1px solid #ccc
+          border-radius: 6px
+      .consulta-container
+        display: flex
+        flex-direction: column
+        width: -webkit-fill-available
+        .consulta
+          height: 100px
+          padding: 10px
+          border: 1px solid #ccc
+          border-radius: 6px
+          margin-bottom: 1rem
+
+    .form-check-container
+      display: flex
+      margin-bottom: 0
+
+    .button-form
+      margin: 25px 0 0 0
+      height: 52px
+      width: 193px
+
+@media (min-width: $break-large)
+  .form-container
+    margin: 0 96px
+
+    .form-title
+      font-size: 20px
+      font-weight: 600
+      line-height: 25px
+      margin: 35px 0
+      font-family: $secondary-font-family
+
+    .form-images-list
+      gap: 25px 35px
+      margin: 43px 50px
+      .form-image-container
+        height: 294px
+        width: 294px
+        .form-image
+          height: 115px
+          width: 115px
+          margin-top: 17px
+        .form-images-titles
+          font-family: $secondary-font-family
+          font-size: 24px
+          font-weight: 600
+          line-height: 30px
+          margin: 21px 43px
+
+    .form-inputs-list
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      justify-content: space-between
+      .column
+        width: 48%
+        .label
+          margin: 1.25rem 0 .5rem 0
+        .input
+          padding: 0.5rem
+          border: 1px solid #ccc
+          border-radius: 6px
+      .consulta-container
+        display: flex
+        flex-direction: column
+        width: -webkit-fill-available
+        margin-top: 25px
+        .consulta
+          height: 100px
+          padding: 10px
+          border: 1px solid #ccc
+          border-radius: 6px
+          margin-top: 8px
+          margin-bottom: 1rem
+
+    .form-check-container
+      display: flex
+      margin-bottom: 0
+
+    .button-form
+      margin: 25px 0 0 0
+      height: 52px
+      width: 193px
