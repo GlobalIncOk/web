@@ -14,7 +14,6 @@ const images = [
 function CountrySelector({ setSelectedCountry }) {
   const [value, setValue] = useState('')
   const options = useMemo(() => countryList().getData(), [])
-
   const changeHandler = value => {
     setValue(value)
     setSelectedCountry(value)
@@ -31,18 +30,20 @@ function CountrySelector({ setSelectedCountry }) {
 }
 
 const Form = () => {
-  const [selectedImageIndexes, setSelectedImageIndexes] = useState([]);
-  const [social, setSocial] = useState('');
-  const [web, setWeb] = useState('');
-  const [fill, setFill] = useState(0);
-  const [formInfo, setFormInfo] = useState(null);
-  const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
-  const [selectedCountry, setSelectedCountry] = useState(null)
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [company, setCompany] = useState("");
+  const [selectedCountry, setSelectedCountry] = useState(null)
+  const [selectedImageIndexes, setSelectedImageIndexes] = useState([]);
+  const selectedImages = selectedImageIndexes.map((index) => images[index].name);
+  const [fill, setFill] = useState(0);
+
+  const [social, setSocial] = useState('');
+  const [web, setWeb] = useState('');
+  const [formInfo, setFormInfo] = useState(null);
+  const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
 
   useEffect(() => {
     console.log("Nombre:", name);
@@ -51,12 +52,21 @@ const Form = () => {
     console.log("Teléfono:", phone);
     console.log("Empresa:", company);
     console.log("País:", selectedCountry);
-  }, [name, lastName, email, phone, company, selectedCountry]);
+    console.log("Selected Images:", selectedImages)
+    console.log('Budget value',fill)
+    console.log('Inputs info', formInfo)
+    console.log('Selected checkboxes:', selectedCheckboxes);
+  }, [name, lastName, email, phone, company, selectedCountry, selectedImages, fill, formInfo, selectedCheckboxes]);
+
+  useEffect(() => {
+    const newFormInfo = { social, web };
+    setFormInfo(newFormInfo);
+
+  }, [social, web]);
 
   const handleImageClick = (index) => {
     const selectedIndex = selectedImageIndexes.indexOf(index);
     let newSelectedImageIndexes = [];
-
     if (selectedIndex === -1) {
       newSelectedImageIndexes = [...selectedImageIndexes, index];
     } else {
@@ -65,23 +75,12 @@ const Form = () => {
         ...selectedImageIndexes.slice(selectedIndex + 1)
       ];
     }
-
     setSelectedImageIndexes(newSelectedImageIndexes);
   };
-
-  useEffect(() => {
-    const selectedImages = selectedImageIndexes.map((index) => images[index].name);
-    console.log("Selected Images:", selectedImages);
-  }, [selectedImageIndexes, images]);
 
   const handleFillChange = (e) => {
     setFill(e.target.value);
   };
-
-  useEffect(() => {
-    setFill(fill);
-    console.log('Budget value',fill);
-  }, [fill]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -92,12 +91,6 @@ const Form = () => {
     }
   };
 
-  useEffect(() => {
-    const newFormInfo = { social, web };
-    setFormInfo(newFormInfo);
-    console.log('Inputs info', newFormInfo); // log the newFormInfo variable
-  }, [social, web]);
-
   const handleCheckboxChange = (e) => {
     const { name, checked } = e.target;
 
@@ -107,10 +100,6 @@ const Form = () => {
       setSelectedCheckboxes(selectedCheckboxes.filter((checkbox) => checkbox !== name));
     }
   };
-
-  useEffect(() => {
-    console.log('Selected checkboxes:', selectedCheckboxes);
-  }, [selectedCheckboxes]);
 
   return (
     <>
