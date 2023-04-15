@@ -37,10 +37,10 @@ const Form = () => {
   const [phone, setPhone] = useState("");
   const [company, setCompany] = useState("");
   const [selectedCountry, setSelectedCountry] = useState(null)
+  const [consultation, setConsultation] = useState("");
   const [selectedImageIndexes, setSelectedImageIndexes] = useState([]);
   const selectedImages = selectedImageIndexes.map((index) => images[index].name);
   const [fill, setFill] = useState(0);
-
   const [social, setSocial] = useState('');
   const [web, setWeb] = useState('');
   const [formInfo, setFormInfo] = useState(null);
@@ -60,7 +60,8 @@ const Form = () => {
       from_services: selectedImages,
       from_budget: fill,
       form_socials: social + ' ' + web,
-      from_checks: selectedCheckboxes
+      from_checks: selectedCheckboxes,
+      from_consultation: consultation
     };
 
     const serviceID = 'service_nx84y5p'
@@ -90,6 +91,7 @@ const Form = () => {
             setLastName('');
             setEmail('');
             setPhone('');
+            setConsultation('');
             setCompany('');
             setSelectedCountry(null);
             setSelectedImageIndexes([]);
@@ -112,11 +114,12 @@ const Form = () => {
     console.log("Teléfono:", phone);
     console.log("Empresa:", company);
     console.log("País:", selectedCountry);
+    console.log("Consultation:", consultation);
     console.log("Selected Images:", selectedImages)
     console.log('Budget value',fill)
     console.log('Inputs info', formInfo)
     console.log('Selected checkboxes:', selectedCheckboxes);
-  }, [name, lastName, email, phone, company, selectedCountry, selectedImages, fill, formInfo, selectedCheckboxes]);
+  }, [name, lastName, email, phone, company, consultation, selectedCountry, selectedImages, fill, formInfo, selectedCheckboxes]);
 
   useEffect(() => {
     const newFormInfo = { social, web };
@@ -175,23 +178,26 @@ const Form = () => {
             />
           ))}
         </div>
-        <label htmlFor="name">Nombre*</label>
+        <label htmlFor="name">Nombre</label>
         <input type="text" id="name" name="name" placeholder="Nombre" value={name} onChange={(event) => setName(event.target.value)} required />
 
-        <label htmlFor="lastName">Apellido*</label>
+        <label htmlFor="lastName">Apellido</label>
         <input type="text" id="lastName" name="lastName" placeholder="Apellido" value={lastName} onChange={(event) => setLastName(event.target.value)} required />
 
-        <label htmlFor="email">Correo Electrónico*</label>
+        <label htmlFor="email">Correo Electrónico</label>
         <input type="email" id="email" name="email" placeholder="Correo Electrónico" value={email} onChange={(event) => setEmail(event.target.value)} required />
 
-        <label htmlFor="phone">Teléfono*</label>
+        <label htmlFor="phone">Teléfono</label>
         <input type="tel" id="phone" name="phone" placeholder="Teléfono" value={phone} onChange={(event) => setPhone(event.target.value)} required />
 
-        <label htmlFor="company">Empresa*</label>
+        <label htmlFor="company">Empresa</label>
         <input type="text" id="company" name="company" placeholder="Empresa" value={company} onChange={(event) => setCompany(event.target.value)} required />
 
-        <label htmlFor="country">País*</label>
-        <CountrySelector setSelectedCountry={setSelectedCountry} id="country" name="country" placeholder="País" required /> 
+        <label htmlFor="country">País</label>
+        <CountrySelector setSelectedCountry={setSelectedCountry} id="country" name="country" placeholder="País" required />
+
+        <label htmlFor="consultation">Su consulta:</label>
+        <input type="text" id="consultation" name="consultation" placeholder="consultation" value={consultation} onChange={(event) => setConsultation(event.target.value)} required />
 
         {selectedImageIndexes.includes(0) && (
           <div className="bar-container">
