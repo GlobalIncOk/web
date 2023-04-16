@@ -4,6 +4,7 @@ import ClientsData from './ClientsData.js';
 import { HeroBottom } from '../../components/index.js';
 import '../../styles/ClientsPagesCss.sass'
 import '../../styles/GalleryPages.sass'
+import { Header, Footer } from '../../containers'
 
 const ClientsPages = () => {
   const { name } = useParams();
@@ -46,27 +47,31 @@ const ClientsPages = () => {
   },[galleryOn])
 
   return (
-    <div className='container'>
-      <div className='logoTitle'>
-        <img className='image' src={client.logo} alt={client.name} />
-        <p className='title'>{client.description}</p>
+    <>
+      <Header />
+      <div className='container'>
+        <div className='logoTitle'>
+          <img className='image' src={client.logo} alt={client.name} />
+          <p className='title'>{client.description}</p>
+        </div>
+        <div className='gridContainer'>
+          {client.imageGrid.map((e)=>{
+            return(
+              <div onClick={()=>{setGalleryOn(true)}} key={client.imageGrid.indexOf(e)} className={`grid grid${client.imageGrid.indexOf(e)}`} >
+                <img  src={e} alt={`image ${client.imageGrid.indexOf(e)}`}/>
+              </div>
+              )
+            })
+          }
+        </div>
+        {galleryOn&&galleryCarousel()}
+        <div className='btn-back'>
+          <Link className='link-back' to={"/"}>Atras</Link>
+        </div>
+        <HeroBottom/>
       </div>
-      <div className='gridContainer'>
-        {client.imageGrid.map((e)=>{
-          return(
-            <div onClick={()=>{setGalleryOn(true)}} key={client.imageGrid.indexOf(e)} className={`grid grid${client.imageGrid.indexOf(e)}`} >
-              <img  src={e} alt={`image ${client.imageGrid.indexOf(e)}`}/>
-            </div>
-            )
-          })
-        }
-      </div>
-      {galleryOn&&galleryCarousel()}
-      <div className='btn-back'>
-        <Link className='link-back' to={"/"}>Atras</Link>
-      </div>
-      <HeroBottom/>
-    </div>
+      <Footer />
+    </>
   );
 };
 

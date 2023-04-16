@@ -26,7 +26,6 @@ function CountrySelector({ setSelectedCountry }) {
       options={options}
       value={value}
       onChange={changeHandler}
-      placeholder="Value"
     />
   )
 }
@@ -178,28 +177,28 @@ const Form = () => {
       <div className='form-inputs-list'>
         <div className='column'>
           <label className='label' htmlFor="name">Nombre</label>
-          <input className='input' type="text" id="name" name="name" placeholder="Value" value={name} onChange={(event) => setName(event.target.value)} required />
+          <input className='input' type="text" id="name" name="name" value={name} onChange={(event) => setName(event.target.value)} required />
 
           <label className='label' htmlFor="lastName">Apellido</label>
-          <input className='input' type="text" id="lastName" name="lastName" placeholder="Value" value={lastName} onChange={(event) => setLastName(event.target.value)} required />
+          <input className='input' type="text" id="lastName" name="lastName" value={lastName} onChange={(event) => setLastName(event.target.value)} required />
 
           <label className='label' htmlFor="email">Correo Electrónico</label>
-          <input className='input' type="email" id="email" name="email" placeholder="Value" value={email} onChange={(event) => setEmail(event.target.value)} required />
+          <input className='input' type="email" id="email" name="email" value={email} onChange={(event) => setEmail(event.target.value)} required />
         </div>
 
         <div className='column'>
           <label className='label' htmlFor="phone">Teléfono</label>
-          <input className='input' type="tel" id="phone" name="phone" placeholder="Value" value={phone} onChange={(event) => setPhone(event.target.value)} required />
+          <input className='input' type="tel" id="phone" name="phone" value={phone} onChange={(event) => setPhone(event.target.value)} required />
 
           <label className='label' htmlFor="company">Empresa</label>
-          <input className='input' type="text" id="company" name="company" placeholder="Value" value={company} onChange={(event) => setCompany(event.target.value)} required />
+          <input className='input' type="text" id="company" name="company" value={company} onChange={(event) => setCompany(event.target.value)} required />
 
           <label className='label' htmlFor="country">País</label>
-          <CountrySelector className='input' setSelectedCountry={setSelectedCountry} id="country" name="country" placeholder="Value" required />
+          <CountrySelector className='input' setSelectedCountry={setSelectedCountry} id="country" name="country" required />
         </div>
         <div className='consulta-container'>
           <label className='label' htmlFor="consultation">Su consulta:</label>
-          <textarea className='consulta' type="text" id="consultation" name="consultation" placeholder="Value" value={consultation} onChange={(event) => setConsultation(event.target.value)} required />
+          <textarea className='consulta' type="text" id="consultation" name="consultation" value={consultation} onChange={(event) => setConsultation(event.target.value)} required />
         </div>
       </div>
 
@@ -209,7 +208,7 @@ const Form = () => {
           <input
             type="range"
             min="0"
-            max="6000"
+            max="15000"
             value={fill}
             onChange={handleFillChange}
             className='input'
@@ -227,7 +226,6 @@ const Form = () => {
               type="text"
               name="social"
               id="social"
-              placeholder="Value"
               value={social}
               onChange={handleInputChange}
             />
@@ -239,7 +237,6 @@ const Form = () => {
               type="text"
               name="web"
               id="web"
-              placeholder="Value"
               value={web}
               onChange={handleInputChange}
             />
