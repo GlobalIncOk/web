@@ -7,6 +7,7 @@ export default function WorldCard() {
   const clientsData = {
     US: 2,
     AR: 5,
+    ES: 1,
   };
 
   return (
@@ -50,6 +51,11 @@ export default function WorldCard() {
             {
               latLng: [25.793449, -80.191788],
               name: "Miami",
+              style: { fill: "#FF9800", stroke: "#FF9800" }
+            },
+            {
+              latLng: [40.4165, -3.70256],
+              name: "Madrid",
               style: { fill: "#FF9800", stroke: "#FF9800" }
             }
           ]}

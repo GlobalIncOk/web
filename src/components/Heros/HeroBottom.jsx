@@ -9,9 +9,9 @@ const HeroBottom = () => {
         <div className='hero-bottom-text'>
           <h2>Social media is the <span>new black.</span></h2>
           <div className='paragraph'>
-            <p>Hoy en día la presencia en los <b>medios sociales</b> y plataformas digitales se volvieron <b>fundamentales.</b></p>
-            <p>Con la estrategia de comunicación correcta, y el equipo correcto <b>-nosotros-</b> podes hacer crecer tu público como nunca te imaginaste.</p>
-            <p>Sumate a esta nueva tendencia <b>the new black</b> para hacer crecer tu negocio.</p>
+            <p>Hoy en día la presencia en los medios sociales y plataformas digitales se volvieron fundamentales.</p>
+            <p>Con la estrategia de comunicación correcta, y el equipo correcto -nosotros- podes hacer crecer tu público como nunca te imaginaste.</p>
+            <p>Sumate a esta nueva tendencia the new black para hacer crecer tu negocio.</p>
           </div>
           <BudgetButton />
         </div>
