@@ -1,0 +1,39 @@
+.containerGallery
+    width: 100%
+    height: 100vh
+    position: fixed
+    top:0
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: #181818dd
+    overflow-x: scroll
+    .btn-carousel
+        border: 1px solid #2680E8
+        width: 25%
+        padding: .5rem
+        border-radius: 16px
+        position: fixed
+        bottom: 15%
+        &:hover
+            background-color: #181818
+            color: #f5f5f5
+    .galleryCridCarousel
+        display: flex
+        align-items: center
+        width: 75%
+        height: 100%
+        .containerImageCarousel
+            width: auto
+            height: 25vh
+            padding: .5rem
+            .imageCarousel
+                width: auto
+                height: 25vh
+                border-radius: 16px
+                transition: all .5s ease-in-out
+                &:hover
+                    transform: translateY(-25px)
+                &:not(:hover)
+                    filter: blur(2px)
+                    transform: translateY(25px)
