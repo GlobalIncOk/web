@@ -154,7 +154,6 @@ const clientData = [
     slug: 'client-one',
     logo:logomostaza,
     imageGrid:[gridMostaza1,gridMostaza2,gridMostaza3,gridMostaza4,gridMostaza5],
-    imageCarousel:[carouselMostaza1,carouselMostaza2,carouselMostaza3,carouselMostaza4,carouselMostaza5,carouselMostaza6,carouselMostaza7],
     description: 'Generación de contenido - Community management (Instagram, Facebook, TikTok, Twitter) - Marketing de influencer',
   },
   {
@@ -162,7 +161,6 @@ const clientData = [
     logo:logovoss,
     slug: 'client-two',
     imageGrid: [gridVoss1,gridVoss2,gridVoss3,gridVoss4,gridVoss5],
-    imageCarousel:[carouselVoss1,carouselVoss2,carouselVoss3,carouselVoss4,carouselVoss5,carouselVoss6,carouselVoss7,carouselVoss8,carouselVoss9],
     description: 'Estrategía social media - Generación de contenido - Community management (Instagram, Facebook) - Adds.',
   },
   {
@@ -170,7 +168,6 @@ const clientData = [
     logo: logodrbeauty,
     slug: 'client-two',
     imageGrid: [gridDrBeauty1,gridDrBeauty2,gridDrBeauty3,gridDrBeauty4,gridDrBeauty5],
-    imageCarousel:[carouselDrBeauty1,carouselDrBeauty2,carouselDrBeauty3,carouselDrBeauty4],
     description: 'Estrategia social media - Generación de contenido - Community management (Instagram y Facebook) - Marketing de influencers',
   },
   {
@@ -178,7 +175,6 @@ const clientData = [
     logo: logotecno,
     slug: 'client-two',
     imageGrid: [gridTecno1,gridTecno2,gridTecno3,gridTecno4,gridTecno5],
-    imageCarousel:[carouselTecno1,carouselTecno2,carouselTecno3,carouselTecno4,carouselTecno5,carouselTecno6,carouselTecno7,carouselTecno8,carouselTecno9,carouselTecno10,carouselTecno11,carouselTecno12],
     description: 'Estrategia social media - Generación de contenido - Community management (Instagram y Facebook) - Marketing de influencers',
   },
   {
@@ -186,7 +182,6 @@ const clientData = [
     logo: logocrazy,
     slug: 'client-two',
     imageGrid: [gridCrazy1,gridCrazy2,gridCrazy3,gridCrazy4,gridCrazy5],
-    imageCarousel:[carouselCrazy1,carouselCrazy2,carouselCrazy3,carouselCrazy4,carouselCrazy5,carouselCrazy6,carouselCrazy7],
     description: 'Estrategia social media - Community management (Instagram y Facebook)',
   },
   {
@@ -194,7 +189,6 @@ const clientData = [
     logo: logoyip,
     slug: 'client-two',
     imageGrid: [gridYip1,gridYip2,gridYip3,gridYip4,gridYip5],
-    imageCarousel:[carouselYip1,carouselYip2,carouselYip3,carouselYip4],
     description: 'Estrategia social media - Community management (Instagram y Facebook)',
   },
   {
@@ -202,7 +196,6 @@ const clientData = [
     logo: logoiaa,
     slug: 'client-two',
     imageGrid: [gridIaa1,gridIaa2,gridIaa3,gridIaa4,gridIaa5],
-    imageCarousel:[carouselIaa1,carouselIaa2],
     description: 'Estrategia social media - Generación de contenido - Community management (Instagram y Facebook) - Marketing de influencers',
   },
   {
@@ -210,7 +203,6 @@ const clientData = [
     logo: logolabirra,
     slug: 'client-two',
     imageGrid: [gridLaBirra1,gridLaBirra2,gridLaBirra3,gridLaBirra4,gridLaBirra5],
-    imageCarousel:[carouselLaBirra1,carouselLaBirra2,carouselLaBirra3,carouselLaBirra4,carouselLaBirra5,carouselLaBirra6,carouselLaBirra7,carouselLaBirra8],
     description: 'Estrategia social media - Community management (Instagram y Facebook)',
   }
 ]
