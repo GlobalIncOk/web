@@ -22,8 +22,8 @@ import gridMostaza5 from '../../assets/Images/ClientsPhotos/mostaza/grid5.avif'
 /* Voss */
 import gridVoss1 from '../../assets/Images/ClientsPhotos/voss/grid1.PNG'
 import gridVoss2 from '../../assets/Images/ClientsPhotos/voss/grid2.jpeg'
-import gridVoss3 from '../../assets/Images/ClientsPhotos/voss/grid3.heif'
-import gridVoss4 from '../../assets/Images/ClientsPhotos/voss/grid4.heif'
+import gridVoss3 from '../../assets/Images/ClientsPhotos/voss/grid3.avif'
+import gridVoss4 from '../../assets/Images/ClientsPhotos/voss/grid4.avif'
 import gridVoss5 from '../../assets/Images/ClientsPhotos/voss/grid5.jpeg'
 
 /* Dr Beauty */
@@ -31,14 +31,14 @@ import gridDrBeauty1 from '../../assets/Images/ClientsPhotos/drbeauty/grid1.jpeg
 import gridDrBeauty2 from '../../assets/Images/ClientsPhotos/drbeauty/grid2.jpeg'
 import gridDrBeauty3 from '../../assets/Images/ClientsPhotos/drbeauty/grid3.PNG'
 import gridDrBeauty4 from '../../assets/Images/ClientsPhotos/drbeauty/grid4.jpeg'
-import gridDrBeauty5 from '../../assets/Images/ClientsPhotos/drbeauty/grid5.HEIC'
+import gridDrBeauty5 from '../../assets/Images/ClientsPhotos/drbeauty/grid5.avif'
 
 /* Crazy */
-import gridCrazy1 from '../../assets/Images/ClientsPhotos/crazy/grid1.jpg'
-import gridCrazy2 from '../../assets/Images/ClientsPhotos/crazy/grid2.jpg'
-import gridCrazy3 from '../../assets/Images/ClientsPhotos/crazy/grid3.jpg'
-import gridCrazy4 from '../../assets/Images/ClientsPhotos/crazy/grid4.jpg'
-import gridCrazy5 from '../../assets/Images/ClientsPhotos/crazy/grid5.jpg'
+import gridCrazy1 from '../../assets/Images/ClientsPhotos/crazy/grid1.avif'
+import gridCrazy2 from '../../assets/Images/ClientsPhotos/crazy/grid2.avif'
+import gridCrazy3 from '../../assets/Images/ClientsPhotos/crazy/grid3.avif'
+import gridCrazy4 from '../../assets/Images/ClientsPhotos/crazy/grid4.avif'
+import gridCrazy5 from '../../assets/Images/ClientsPhotos/crazy/grid5.avif'
 
 /* Tecno Aislantes */
 import gridTecno1 from '../../assets/Images/ClientsPhotos/tecno/grid1.jpeg'
@@ -79,8 +79,75 @@ import carouselMostaza5 from '../../assets/Images/ClientsPhotos/mostaza/carousel
 import carouselMostaza6 from '../../assets/Images/ClientsPhotos/mostaza/carousel6.avif'
 import carouselMostaza7 from '../../assets/Images/ClientsPhotos/mostaza/carousel7.avif'
 
+/* Voss */
+
+import carouselVoss1 from '../../assets/Images/ClientsPhotos/voss/carousel1.heif'
+import carouselVoss2 from '../../assets/Images/ClientsPhotos/voss/carousel2.HEIC'
+import carouselVoss3 from '../../assets/Images/ClientsPhotos/voss/carousel3.heif'
+import carouselVoss4 from '../../assets/Images/ClientsPhotos/voss/carousel4.heif'
+import carouselVoss5 from '../../assets/Images/ClientsPhotos/voss/carousel5.heif'
+import carouselVoss6 from '../../assets/Images/ClientsPhotos/voss/carousel6.heif'
+import carouselVoss7 from '../../assets/Images/ClientsPhotos/voss/carousel7.heif'
+import carouselVoss8 from '../../assets/Images/ClientsPhotos/voss/carousel8.heif'
+import carouselVoss9 from '../../assets/Images/ClientsPhotos/voss/carousel9.jpeg'
+
+/* Dr Beauty */
+
+import carouselDrBeauty1 from '../../assets/Images/ClientsPhotos/drbeauty/carousel1.jpeg'
+import carouselDrBeauty2 from '../../assets/Images/ClientsPhotos/drbeauty/carousel2.jpeg'
+import carouselDrBeauty3 from '../../assets/Images/ClientsPhotos/drbeauty/carousel3.jpeg'
+import carouselDrBeauty4 from '../../assets/Images/ClientsPhotos/drbeauty/carousel4.png'
+
+/* Crazy */
+
+import carouselCrazy1 from '../../assets/Images/ClientsPhotos/crazy/carousel1.jpg'
+import carouselCrazy2 from '../../assets/Images/ClientsPhotos/crazy/carousel2.jpeg'
+import carouselCrazy3 from '../../assets/Images/ClientsPhotos/crazy/carousel3.jpg'
+import carouselCrazy4 from '../../assets/Images/ClientsPhotos/crazy/carousel4.jpg'
+import carouselCrazy5 from '../../assets/Images/ClientsPhotos/crazy/carousel5.avif'
+import carouselCrazy6 from '../../assets/Images/ClientsPhotos/crazy/carousel6.PNG'
+import carouselCrazy7 from '../../assets/Images/ClientsPhotos/crazy/carousel7.avif'
+
+/* Tecno Aislantes */
+
+import carouselTecno1 from '../../assets/Images/ClientsPhotos/tecno/carousel1.heif'
+import carouselTecno2 from '../../assets/Images/ClientsPhotos/tecno/carousel2.jpeg'
+import carouselTecno3 from '../../assets/Images/ClientsPhotos/tecno/carousel3.jpeg'
+import carouselTecno4 from '../../assets/Images/ClientsPhotos/tecno/carousel4.jpeg'
+import carouselTecno5 from '../../assets/Images/ClientsPhotos/tecno/carousel5.jpeg'
+import carouselTecno6 from '../../assets/Images/ClientsPhotos/tecno/carousel6.jpeg'
+import carouselTecno7 from '../../assets/Images/ClientsPhotos/tecno/carousel7.jpeg'
+import carouselTecno8 from '../../assets/Images/ClientsPhotos/tecno/carousel8.heif'
+import carouselTecno9 from '../../assets/Images/ClientsPhotos/tecno/carousel9.PNG'
+import carouselTecno10 from '../../assets/Images/ClientsPhotos/tecno/carousel10.jpeg'
+import carouselTecno11 from '../../assets/Images/ClientsPhotos/tecno/carousel11.PNG'
+import carouselTecno12 from '../../assets/Images/ClientsPhotos/tecno/carousel12.PNG'
+
+/* Yip */
+
+import carouselYip1 from '../../assets/Images/ClientsPhotos/yip/carousel1.JPEG'
+import carouselYip2 from '../../assets/Images/ClientsPhotos/yip/carousel2.PNG'
+import carouselYip3 from '../../assets/Images/ClientsPhotos/yip/carousel3.PNG'
+import carouselYip4 from '../../assets/Images/ClientsPhotos/yip/carousel4.jpg'
+
+/* Iaa */
+
+import carouselIaa1 from '../../assets/Images/ClientsPhotos/iaa/carousel1.PNG'
+import carouselIaa2 from '../../assets/Images/ClientsPhotos/iaa/carousel2.PNG'
+
+/* La Birra */
+
+import carouselLaBirra1 from '../../assets/Images/ClientsPhotos/labirra/carousel1.jpeg'
+import carouselLaBirra2 from '../../assets/Images/ClientsPhotos/labirra/carousel2.jpeg'
+import carouselLaBirra3 from '../../assets/Images/ClientsPhotos/labirra/carousel3.jpeg'
+import carouselLaBirra4 from '../../assets/Images/ClientsPhotos/labirra/carousel4.PNG'
+import carouselLaBirra5 from '../../assets/Images/ClientsPhotos/labirra/carousel5.jpeg'
+import carouselLaBirra6 from '../../assets/Images/ClientsPhotos/labirra/carousel6.JPG'
+import carouselLaBirra7 from '../../assets/Images/ClientsPhotos/labirra/carousel7.jpeg'
+import carouselLaBirra8 from '../../assets/Images/ClientsPhotos/labirra/carousel8.jpeg'
 
 /* Data */
+
 const clientData = [
   {
     name: 'mostaza',
@@ -95,7 +162,7 @@ const clientData = [
     logo:logovoss,
     slug: 'client-two',
     imageGrid: [gridVoss1,gridVoss2,gridVoss3,gridVoss4,gridVoss5],
-    imageCarousel:[],
+    imageCarousel:[carouselVoss1,carouselVoss2,carouselVoss3,carouselVoss4,carouselVoss5,carouselVoss6,carouselVoss7,carouselVoss8,carouselVoss9],
     description: 'Estrategía social media - Generación de contenido - Community management (Instagram, Facebook) - Adds.',
   },
   {
@@ -103,7 +170,7 @@ const clientData = [
     logo: logodrbeauty,
     slug: 'client-two',
     imageGrid: [gridDrBeauty1,gridDrBeauty2,gridDrBeauty3,gridDrBeauty4,gridDrBeauty5],
-    imageCarousel:[],
+    imageCarousel:[carouselDrBeauty1,carouselDrBeauty2,carouselDrBeauty3,carouselDrBeauty4],
     description: 'Estrategia social media - Generación de contenido - Community management (Instagram y Facebook) - Marketing de influencers',
   },
   {
@@ -111,7 +178,7 @@ const clientData = [
     logo: logotecno,
     slug: 'client-two',
     imageGrid: [gridTecno1,gridTecno2,gridTecno3,gridTecno4,gridTecno5],
-    imageCarousel:[],
+    imageCarousel:[carouselTecno1,carouselTecno2,carouselTecno3,carouselTecno4,carouselTecno5,carouselTecno6,carouselTecno7,carouselTecno8,carouselTecno9,carouselTecno10,carouselTecno11,carouselTecno12],
     description: 'Estrategia social media - Generación de contenido - Community management (Instagram y Facebook) - Marketing de influencers',
   },
   {
@@ -119,7 +186,7 @@ const clientData = [
     logo: logocrazy,
     slug: 'client-two',
     imageGrid: [gridCrazy1,gridCrazy2,gridCrazy3,gridCrazy4,gridCrazy5],
-    imageCarousel:[],
+    imageCarousel:[carouselCrazy1,carouselCrazy2,carouselCrazy3,carouselCrazy4,carouselCrazy5,carouselCrazy6,carouselCrazy7],
     description: 'Estrategia social media - Community management (Instagram y Facebook)',
   },
   {
@@ -127,7 +194,7 @@ const clientData = [
     logo: logoyip,
     slug: 'client-two',
     imageGrid: [gridYip1,gridYip2,gridYip3,gridYip4,gridYip5],
-    imageCarousel:[],
+    imageCarousel:[carouselYip1,carouselYip2,carouselYip3,carouselYip4],
     description: 'Estrategia social media - Community management (Instagram y Facebook)',
   },
   {
@@ -135,7 +202,7 @@ const clientData = [
     logo: logoiaa,
     slug: 'client-two',
     imageGrid: [gridIaa1,gridIaa2,gridIaa3,gridIaa4,gridIaa5],
-    imageCarousel:[],
+    imageCarousel:[carouselIaa1,carouselIaa2],
     description: 'Estrategia social media - Generación de contenido - Community management (Instagram y Facebook) - Marketing de influencers',
   },
   {
@@ -143,7 +210,7 @@ const clientData = [
     logo: logolabirra,
     slug: 'client-two',
     imageGrid: [gridLaBirra1,gridLaBirra2,gridLaBirra3,gridLaBirra4,gridLaBirra5],
-    imageCarousel:[],
+    imageCarousel:[carouselLaBirra1,carouselLaBirra2,carouselLaBirra3,carouselLaBirra4,carouselLaBirra5,carouselLaBirra6,carouselLaBirra7,carouselLaBirra8],
     description: 'Estrategia social media - Community management (Instagram y Facebook)',
   }
 ]
