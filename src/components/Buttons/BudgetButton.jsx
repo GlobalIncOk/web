@@ -5,7 +5,7 @@ import {Link} from "react-router-dom"
 const BudgetButton = () => {
   return (
     <div className='budget-button-container'>
-      <button className='budget-button'><Link to='/presupuesto' className='link'>Pedir presupuesto</Link></button>
+      <button className='budget-button'><Link to='/presupuesto' smooth={true} offset={-70} className='link'>Pedir presupuesto</Link></button>
     </div>
   )
 }
