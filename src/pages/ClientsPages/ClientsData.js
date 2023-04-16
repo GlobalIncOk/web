@@ -81,14 +81,14 @@ import carouselMostaza7 from '../../assets/Images/ClientsPhotos/mostaza/carousel
 
 /* Voss */
 
-import carouselVoss1 from '../../assets/Images/ClientsPhotos/voss/carousel1.heif'
-import carouselVoss2 from '../../assets/Images/ClientsPhotos/voss/carousel2.HEIC'
-import carouselVoss3 from '../../assets/Images/ClientsPhotos/voss/carousel3.heif'
-import carouselVoss4 from '../../assets/Images/ClientsPhotos/voss/carousel4.heif'
-import carouselVoss5 from '../../assets/Images/ClientsPhotos/voss/carousel5.heif'
-import carouselVoss6 from '../../assets/Images/ClientsPhotos/voss/carousel6.heif'
-import carouselVoss7 from '../../assets/Images/ClientsPhotos/voss/carousel7.heif'
-import carouselVoss8 from '../../assets/Images/ClientsPhotos/voss/carousel8.heif'
+import carouselVoss1 from '../../assets/Images/ClientsPhotos/voss/carousel1.avif'
+import carouselVoss2 from '../../assets/Images/ClientsPhotos/voss/carousel2.avif'
+import carouselVoss3 from '../../assets/Images/ClientsPhotos/voss/carousel3.avif'
+import carouselVoss4 from '../../assets/Images/ClientsPhotos/voss/carousel4.avif'
+import carouselVoss5 from '../../assets/Images/ClientsPhotos/voss/carousel5.avif'
+import carouselVoss6 from '../../assets/Images/ClientsPhotos/voss/carousel6.avif'
+import carouselVoss7 from '../../assets/Images/ClientsPhotos/voss/carousel7.avif'
+import carouselVoss8 from '../../assets/Images/ClientsPhotos/voss/carousel8.avif'
 import carouselVoss9 from '../../assets/Images/ClientsPhotos/voss/carousel9.jpeg'
 
 /* Dr Beauty */
@@ -110,14 +110,14 @@ import carouselCrazy7 from '../../assets/Images/ClientsPhotos/crazy/carousel7.av
 
 /* Tecno Aislantes */
 
-import carouselTecno1 from '../../assets/Images/ClientsPhotos/tecno/carousel1.heif'
+import carouselTecno1 from '../../assets/Images/ClientsPhotos/tecno/carousel1.avif'
 import carouselTecno2 from '../../assets/Images/ClientsPhotos/tecno/carousel2.jpeg'
 import carouselTecno3 from '../../assets/Images/ClientsPhotos/tecno/carousel3.jpeg'
 import carouselTecno4 from '../../assets/Images/ClientsPhotos/tecno/carousel4.jpeg'
 import carouselTecno5 from '../../assets/Images/ClientsPhotos/tecno/carousel5.jpeg'
 import carouselTecno6 from '../../assets/Images/ClientsPhotos/tecno/carousel6.jpeg'
 import carouselTecno7 from '../../assets/Images/ClientsPhotos/tecno/carousel7.jpeg'
-import carouselTecno8 from '../../assets/Images/ClientsPhotos/tecno/carousel8.heif'
+import carouselTecno8 from '../../assets/Images/ClientsPhotos/tecno/carousel8.avif'
 import carouselTecno9 from '../../assets/Images/ClientsPhotos/tecno/carousel9.PNG'
 import carouselTecno10 from '../../assets/Images/ClientsPhotos/tecno/carousel10.jpeg'
 import carouselTecno11 from '../../assets/Images/ClientsPhotos/tecno/carousel11.PNG'

@@ -8,26 +8,32 @@
     align-items: center
     background-color: #181818dd
     overflow-x: scroll
-    padding: 1rem
     .btn-carousel
         border: 1px solid #2680E8
         width: 25%
         padding: .5rem
         border-radius: 16px
         position: fixed
-        top: 15%
+        bottom: 15%
         &:hover
             background-color: #181818
             color: #f5f5f5
-    .containerImageCarousel
-        overflow:hidden
-        width: auto
-        height: 25vh
-        margin: 25px
-        .imageCarousel
+    .galleryCridCarousel
+        display: flex
+        align-items: center
+        width: 75%
+        height: 100%
+        .containerImageCarousel
             width: auto
             height: 25vh
-            border-radius: 16px
-            transition: all .5s ease-in-out
-            &:hover
-                transform: scale(1.25) translateY(-25px)
+            padding: .5rem
+            .imageCarousel
+                width: auto
+                height: 25vh
+                border-radius: 16px
+                transition: all .5s ease-in-out
+                &:hover
+                    transform: translateY(-25px)
+                &:not(:hover)
+                    filter: blur(2px)
+                    transform: translateY(25px)

@@ -18,14 +18,24 @@ const ClientsPages = () => {
       <div className={`gallery${galleryOn}`}>
         <div className='containerGallery'>
           <button className='btn-carousel' onClick={()=>{setGalleryOn(false)}}>Cerrar</button>
-          {client.imageCarousel.map((e)=>{
-            return(
-              <div className='containerImageCarousel' key={client.imageCarousel.indexOf(e)} >
-                <img className='imageCarousel' src={e} alt={`image ${client.imageGrid.indexOf(e)}`}/>
-              </div>
-              )
-          })
-        }
+          <div className='galleryCridCarousel'>
+            {client.imageGrid.map((e)=>{
+              return(
+                <div className='containerImageCarousel' key={client.imageGrid.indexOf(e)} >
+                  <img className='imageCarousel' src={e} alt={`image ${client.imageGrid.indexOf(e)}`}/>
+                </div>
+                )
+              })
+            }
+            {client.imageCarousel.map((e)=>{
+              return(
+                <div className='containerImageCarousel' key={client.imageCarousel.indexOf(e)} >
+                  <img className='imageCarousel' src={e} alt={`image ${client.imageGrid.indexOf(e)}`}/>
+                </div>
+                )
+              })
+            }
+          </div>
         </div>
       </div>
     )
