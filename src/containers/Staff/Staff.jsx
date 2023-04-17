@@ -1,6 +1,5 @@
 import React from 'react'
 import { StaffCard, StaffTitle } from '../../components'
-
 import '../../styles/Staff.sass'
 
 const Staff = () => {

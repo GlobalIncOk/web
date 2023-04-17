@@ -7,7 +7,7 @@ img
 
 .backs
   border-radius: 16px
-  width: 200px
+  width: 140px
   background-repeat: no-repeat, repeat
 
 .gallery-container
@@ -18,8 +18,8 @@ img
   gap: 14px
   .images
     border-radius: 16px
-    width: 200px
-    height: 180px
+    width: 140px
+    height: 140px
     display: flex
     justify-content: center
     align-items: center
@@ -28,6 +28,14 @@ img
       backdrop-filter: none
       transition: all .15s linear
       border-radius: 16px
+
+@media (min-width: 478px)
+  .backs
+    width: 200px
+  .gallery-container
+    .images
+      width: 200px
+      height: 180px
 
 @media (min-width: $break-medium)
   .gallery-container
