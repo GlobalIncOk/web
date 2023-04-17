@@ -1,50 +1,36 @@
-import React, {useState, useEffect} from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useState } from 'react';
+import { useParams } from 'react-router-dom';
 import ClientsData from './ClientsData.js';
 import { HeroBottom } from '../../components/index.js';
-import '../../styles/ClientsPagesCss.sass'
-import '../../styles/GalleryPages.sass'
-import { Header, Footer } from '../../containers'
+import { Header, Footer } from '../../containers';
+import FSLightbox from 'fslightbox-react';
+import '../../styles/ClientsPagesCss.sass';
 
 const ClientsPages = () => {
   const { name } = useParams();
-  const [galleryOn, setGalleryOn]=useState(false)
   const client = ClientsData.find((c) => c.name === name);
+  const [lightboxController, setLightboxController] = useState({
+    toggler: false,
+    slide: 1
+  });
+
+  const openLightboxOnSlide = (slide) => {
+    setLightboxController({
+      toggler: !lightboxController.toggler,
+      slide
+    });
+  };
+
+  const handleCloseLightbox = () => {
+    setLightboxController({
+      toggler: false,
+      slide: 1
+    });
+  };
+
   if (!client) {
     return <div>Client not found!</div>;
   }
-
-  const galleryCarousel=()=>{
-    return(
-      <div className={`gallery${galleryOn}`}>
-        <div className='containerGallery'>
-          <button className='btn-carousel' onClick={()=>{setGalleryOn(false)}}>Cerrar</button>
-          <div className='galleryCridCarousel'>
-            {client.imageGrid.map((e)=>{
-              return(
-                <div className='containerImageCarousel' key={client.imageGrid.indexOf(e)} >
-                  <img className='imageCarousel' src={e} alt={`image ${client.imageGrid.indexOf(e)}`}/>
-                </div>
-                )
-              })
-            }
-            {client.imageCarousel.map((e)=>{
-              return(
-                <div className='containerImageCarousel' key={client.imageCarousel.indexOf(e)} >
-                  <img className='imageCarousel' src={e} alt={`image ${client.imageGrid.indexOf(e)}`}/>
-                </div>
-                )
-              })
-            }
-          </div>
-        </div>
-      </div>
-    )
-  }
-
-  useEffect(()=>{
-    galleryCarousel()
-  },[galleryOn])
 
   return (
     <>
@@ -55,21 +41,24 @@ const ClientsPages = () => {
           <p className='title'>{client.description}</p>
         </div>
         <div className='gridContainer'>
-          {client.imageGrid.map((e)=>{
-            return(
-              <div onClick={()=>{setGalleryOn(true)}} key={client.imageGrid.indexOf(e)} className={`grid grid${client.imageGrid.indexOf(e)}`} >
-                <img  src={e} alt={`image ${client.imageGrid.indexOf(e)}`}/>
-              </div>
-              )
-            })
-          }
+          {client.imageGrid.map((e, i) => (
+            <div
+              key={`grid${i}`}
+              className={`grid grid${i}`}
+              onClick={() => openLightboxOnSlide(i + 1)}
+            >
+              <img src={e} alt={`image ${i}`} />
+            </div>
+          ))}
         </div>
-        {galleryOn&&galleryCarousel()}
-        <div className='btn-back'>
-          <Link className='link-back' to={"/"}>Atras</Link>
-        </div>
-        <HeroBottom/>
       </div>
+      <FSLightbox
+        toggler={lightboxController.toggler}
+        sources={client.imageGrid}
+        slide={lightboxController.slide}
+        onClose={handleCloseLightbox}
+      />
+      <HeroBottom />
       <Footer />
     </>
   );
