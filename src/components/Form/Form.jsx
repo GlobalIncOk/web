@@ -63,9 +63,9 @@ const Form = () => {
       from_consultation: consultation
     };
 
-    const serviceID = 'service_nx84y5p'
-    const templateID = 'template_szphrkt'
-    const publicKey = '2na7nu4KCNkVkXE0T'
+    const serviceID = 'service_q2rg2wk'
+    const templateID = 'template_ve6gtrt'
+    const publicKey = '1mg8WlcTKf--Eap1g'
 
     Swal.fire({
       title: '¿Enviar formulario?',
