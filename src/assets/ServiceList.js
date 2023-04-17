@@ -25,7 +25,7 @@ export const ServicesList = [
     src2: marketing2,
     src3: marketing3,
     src4: marketing4,
-    description: 'Ofrecemos herramientas y soluciones para hacer crecer tu negocio, acorde a tu capacidad de presupuesto. Tanto de forma orgánica y paga.'
+    description: 'Ofrecemos herramientas y soluciones para hacer crecer tu negocio, acorde a tu capacidad de presupuesto.'
   },
   { id: 2, name: 'Diseño Web',
     src: diseño,

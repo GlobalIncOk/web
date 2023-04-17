@@ -13,7 +13,7 @@ const HeroTop = () => {
           <div className='paragraph'>
             <p>Hoy en día la presencia en los medios sociales y plataformas digitales se volvieron fundamentales.</p>
             <p>Con la estrategia de comunicación correcta, y el equipo correcto -nosotros- podes hacer crecer tu público como nunca te imaginaste.</p>
-            <p>Sumate a esta nueva tendencia the new black para hacer crecer tu negocio.</p>
+            <p>Sumate a esta nueva tendencia para hacer crecer tu negocio.</p>
           </div>
           <BudgetButton />
         </div>
